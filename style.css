@@ -1,6 +1,4 @@
-.footer_contact{
-    color: red;
-}
+
 .cat_images{
     height: 200px;
 }
@@ -10,3 +8,14 @@
 .book_image{
     height: 300px;
 }
+footer img{
+    height: 25px;
+}
+
+/* .footer_contact_left{
+    margin-left: 2;
+}
+
+.footer_contact_right{
+    text-align: right;
+} */
