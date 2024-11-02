@@ -37,24 +37,21 @@ h1,h2,h3,h4,h5{
 h1{
     font-size: 2.1em;
 }
-footer>p{
-    
-}
+
 .copyright {
-text-align: center;
+    text-align: center;
+}
+.footer_contact_left,.footer_contact_right{
+    display: inline-block;
+    margin:0.15em;   
 }
 
 .footer_contact_right{
-    display: inline-block;
     float: right;
-    margin:0.15em;
 }
 
 .footer_contact_left{
-    margin:0.15em;
-    display: inline-block;
     float: left;
-
 }
 
 /* General Styling (what properties will be in every tag)*/
@@ -123,17 +120,20 @@ figcaption{}
 /* Classes and IDs*/
 .footer_contact_right{}
 .footer_contact_left{}
+
 /* Setup for the layout */
 .person_left, .person_right {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
     justify-content: flex-start;
 }
+
 /* Make text stick to the right */
 .person_right{
     text-align: right;
 }
+
 /* Style the names */
 .figname {
 
