@@ -10,7 +10,7 @@
 .sub_categorie{
     text-align: center;
 }
-.prof_pic{
+.prof_pic_left,.prof_pic_right{
     height: 250px;
 }
 .book_image{
@@ -47,11 +47,11 @@ text-align: center;
 .footer_contact_right{
     display: inline-block;
     float: right;
-    margin:0.16em;
+    margin:0.15em;
 }
 
 .footer_contact_left{
-    margin:0.16em;
+    margin:0.15em;
     display: inline-block;
     float: left;
 
@@ -123,9 +123,25 @@ figcaption{}
 /* Classes and IDs*/
 .footer_contact_right{}
 .footer_contact_left{}
-.person{}
-.prof_pic{}
-.resume{}
+/* Setup for the layout */
+.person_left, .person_right {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+/* Make text stick to the right */
+.person_right{
+    text-align: right;
+}
+/* Style the names */
+.figname {
+
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .nav_categories{}
 .categorie{}
 .cat_images{}
