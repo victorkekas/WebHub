@@ -75,8 +75,36 @@ h1{}
 h2{}
 h3{}
 h4{}
-nav{}
-a{}
+/* Centralise the navigation menu */
+nav{
+    display: flex;
+    justify-content: center;
+}
+/* Enlarge the text when hover */
+nav a:hover{
+    font-size: 1.1em;
+}
+/* Link decoration */
+a{
+    text-decoration: none;
+    color: #A66326;
+    transition:  all .35s ease;
+    font-weight: 500;
+    padding: 0.5em;
+    margin: 0.7em;
+}
+/* Link hover decoration */
+a:hover{
+    color: #603916;
+    /* font-size: 1.1em; */
+}
+/* Link on click decoration */
+a:active{
+    color: #283618;
+}
+/* nav a:visited{
+    color: #603916;
+} */
 main{}
 section{}
 article{}
