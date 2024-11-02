@@ -27,7 +27,10 @@ nav{
     font-size: 1.5em;
 }
 
-
+header>a{
+    margin: 0%;
+    position: absolute;
+}
 h1,h2,h3,h4,h5{
     text-align:center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -70,7 +73,12 @@ body,header,footer,main{
 }
 /* Main tags and pseudo-classes*/
 body{}
-header{}
+header>img{
+    position: absolute;
+    display: flex;
+    justify-content:space-between;
+}
+
 h1{}
 h2{}
 h3{}
@@ -79,6 +87,7 @@ h4{}
 nav{
     display: flex;
     justify-content: center;
+
 }
 /* Enlarge the text when hover */
 nav a:hover{
@@ -96,7 +105,6 @@ a{
 /* Link hover decoration */
 a:hover{
     color: #603916;
-    /* font-size: 1.1em; */
 }
 /* Link on click decoration */
 a:active{
@@ -142,7 +150,14 @@ figcaption{}
     font-weight: bold;
     font-style: italic;
 }
-
+.makesmaller{
+    margin-left: 7em;
+    margin-right: 7em;
+    
+}
+.topimage{
+    height: 5em;
+}
 .nav_categories{}
 .categorie{}
 .cat_images{}
@@ -152,9 +167,7 @@ figcaption{}
     text-align: center;
     font-weight: 300;
 }
-.test{
 
-}
 .description{}
 .book_image{}
 .tables-of-content{}
