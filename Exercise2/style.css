@@ -1,8 +1,10 @@
 .prof_pic{
     height: 250px;
 }
-.book_image{
+.book_image , .video_image {
     height: 300px;
+    float: inline-start;
+    display: inline-flex;
 }
 
 footer img{
@@ -19,7 +21,15 @@ header>a{
     margin: 0%;
     position: absolute;
 }
-
+article .stars,article .reviews,article .authors, article .instructor{
+    float: right    ;
+}
+article .reviews,article .stars{
+    font-weight: 800;
+}
+article .authors, article .instructor{
+    font-style: italic;
+}
 h1{
     font-size: 2.1em;
 }
@@ -201,7 +211,9 @@ figcaption{}
     text-align: center;
     font-weight: 300;
 }
-
+article ul>li {
+list-style-type:none ;
+}
 .description{}
-.book_image{}
+
 .tables-of-content{}
