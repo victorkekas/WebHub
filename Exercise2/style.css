@@ -55,7 +55,8 @@ h1{
 }
 
 /* General Styling (what properties will be in every tag)*/
-body,header,footer,main, h1, h2, h3, h4, nav, a, section, article, p, ul, ol, li, strong, footer, picture, img, source, figure, figcaption {
+/* body,header,footer,main, h1, h2, h3, h4, nav, a, section, article, p, ul, ol, li, strong, footer, picture, img, source, figure, figcaption { */
+*{
     margin: 0.5em;
     padding: 0.3em;
     font-family: "Roboto", sans-serif;
@@ -110,7 +111,12 @@ a:active{
 main{}
 section{}
 article{}
-p{}
+
+
+/* The text of each paragraph, goes from one end to the other. */
+p{
+    text-align: justify;
+}
 ul{}
 ol{}
 li{}
@@ -214,6 +220,112 @@ figcaption{}
 article ul>li {
 list-style-type:none ;
 }
+
+/* .lecture{
+    background-color: aqua;
+    display: block;
+    clear: both;
+} */
+
+
+
 .description{}
 
-.tables-of-content{}
+/*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html 
+    Purpose:    Centralize the content*/
+.tables-of-content{
+    text-align: center;
+}
+
+/*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html 
+    Purpose:    Remove list numbers,
+                Αlignment of the items */
+.tables-of-content ol{
+    list-style-type: none;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Pythin_mit_lectures.html & nn_and_dl.html */
+.course-description{
+    margin-left: 10em ;
+    margin-right: 10em;
+    margin-bottom: 5em;
+    display: block;
+}
+.course-description picture> img, .course-description picture> source {
+    /* background-color: aqua  ; */
+    float: left;
+    /* height: 20em; */
+    max-width: 35em;
+}
+.course-description p{
+    margin: 0em;
+    text-align: justify;
+}
+
+/*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html
+    Purpose:    Puts the link in a separate line, under the previous context.
+                With 'clear' it is not affected by the float attribute. */
+.course-description a{
+    display: block;
+    clear: both;
+    text-align: end;
+}
+
+
+.courses-container{
+    margin-left: 10em ;
+    margin-right: 10em;
+}
+
+.course{
+    display: block;
+    clear: both;
+    /* border: 1px solid #ccc;
+    border-radius: 8px; */
+}
+
+.course iframe{
+    float: left;
+    border-radius: 8px;
+}
+
+.course .chapter-photo{
+    float: left;
+    text-align: center;
+}
+
+.course .chapter-photo figure{
+    display: inline-block;        /* Limits the width of the figure to its contents */
+    text-align: center;           /* Center-aligns text within the figure */  
+    max-width: 35em;
+}
+
+.course .chapter-photo figure img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.course .chapter-photo figure figcaption {
+    max-width: 100%;
+    margin-top: 10px;             /* Adds some space between the image and caption */
+    word-wrap: break-word;        /* Wraps long words to prevent overflow */
+}
+
+.course picture img, .course picture source{
+    max-width: 28em;
+}
+
+.course-subinformations {
+    display: block;
+    clear: both;
+}
+
+.course-subinformations ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+}
