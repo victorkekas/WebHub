@@ -1,0 +1,331 @@
+.prof_pic{
+    height: 250px;
+}
+.book_image , .video_image {
+    height: 300px;
+    float: inline-start;
+    display: inline-flex;
+}
+
+footer img{
+    margin:0%;
+    height: 25px;
+}
+
+nav{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+header>a{
+    margin: 0%;
+    position: absolute;
+}
+article .stars,article .reviews,article .authors, article .instructor{
+    float: right    ;
+}
+article .reviews,article .stars{
+    font-weight: 800;
+}
+article .authors, article .instructor{
+    font-style: italic;
+}
+h1{
+    font-size: 2.1em;
+}
+
+.copyright {
+    text-align: center;
+}
+.footer_contact_left,.footer_contact_right,.copyright{
+    display: block;
+    text-align: center; 
+}
+
+.footer_contact_right{
+
+    justify-content: flex-end;
+    float: inline-end;
+}
+
+.footer_contact_left{
+
+    justify-content: flex-start;
+    float: inline-start;
+}
+
+/* General Styling (what properties will be in every tag)*/
+/* body,header,footer,main, h1, h2, h3, h4, nav, a, section, article, p, ul, ol, li, strong, footer, picture, img, source, figure, figcaption { */
+*{
+    margin: 0.5em;
+    padding: 0.3em;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.0em;
+    color: #283618;
+}
+body,header,footer,main{
+    background-color: #FEFAE0;
+}
+/* Main tags and pseudo-classes*/
+body{}
+
+header>img{
+    position: absolute;
+    display: flex;
+    justify-content:space-between;
+}
+
+h1,h2,h3,h4,h5{
+    text-align:center;
+    color: #603916;
+}
+
+/* Centralise the navigation menu */
+nav{
+    display: flex;
+    justify-content: center;
+
+}
+/* Enlarge the text when hover */
+nav a:hover{
+    font-size: 1.1em;
+}
+/* Link decoration */
+a{
+    text-decoration: none;
+    color: #A66326;
+    transition:  all .35s ease;
+    font-weight: 500;
+    padding: 0.5em;
+    margin: 0.7em;
+}
+/* Link hover decoration */
+a:hover{
+    color: #603916;
+}
+/* Link on click decoration */
+a:active{
+    color: #283618;
+}
+
+main{}
+section{}
+article{}
+
+
+/* The text of each paragraph, goes from one end to the other. */
+p{
+    text-align: justify;
+}
+ul{}
+ol{}
+li{}
+strong{}
+footer{}
+picture{}
+img{}
+source{}
+figure{}
+figcaption{}
+
+/* Classes and IDs*/
+.footer_contact_right{}
+.footer_contact_left{}
+
+/* Setup for the layout */
+.person_left, .person_right {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5em;
+    justify-content: flex-start;
+}
+
+/* Make text stick to the right */
+.person_right{
+    text-align: right;
+}
+
+/* Style the names */
+.figname {
+
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.makesmaller{
+    margin-left: 7em;
+    margin-right: 7em;
+    
+}
+.topimage{
+    height: 5em;
+}
+.nav_categories{
+    /* background-color: #283618; */
+    justify-content: center;
+}
+
+/*  */
+.category {
+    /* background-color: #603916;
+    border: 2px solid black; */
+    padding: 1em;
+    width: 90em;
+    margin: auto;
+}
+
+.category h3{
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    text-align: start;
+}
+
+.category_content{
+    display: flex;
+    align-items: flex-start;
+}
+
+.category_image{
+    flex: 1;
+    margin-right: 3em;
+}
+
+.category_image img, .category_image source{
+    height: 13em;
+    display: block;
+    margin: auto;
+    width: 23em;
+    /* width: auto; */
+}
+
+.category_links{
+    flex: 4;
+    list-style-type: none;
+}
+
+.category_links li{
+    margin-bottom: 1em;
+}
+
+.category_links li:last-child{
+    margin-bottom: auto;
+    margin-top: 1em;
+}
+
+
+.copyright{
+    text-align: center;
+    font-weight: 300;
+}
+article ul>li {
+list-style-type:none ;
+}
+
+/* .lecture{
+    background-color: aqua;
+    display: block;
+    clear: both;
+} */
+
+
+
+.description{}
+
+/*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html 
+    Purpose:    Centralize the content*/
+.tables-of-content{
+    text-align: center;
+}
+
+/*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html 
+    Purpose:    Remove list numbers,
+                Αlignment of the items */
+.tables-of-content ol{
+    list-style-type: none;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Pythin_mit_lectures.html & nn_and_dl.html */
+.course-description{
+    margin-left: 10em ;
+    margin-right: 10em;
+    margin-bottom: 5em;
+    display: block;
+}
+.course-description picture> img, .course-description picture> source {
+    /* background-color: aqua  ; */
+    float: left;
+    /* height: 20em; */
+    max-width: 35em;
+}
+.course-description p{
+    margin: 0em;
+    text-align: justify;
+}
+
+/*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html
+    Purpose:    Puts the link in a separate line, under the previous context.
+                With 'clear' it is not affected by the float attribute. */
+.course-description a{
+    display: block;
+    clear: both;
+    text-align: end;
+}
+
+
+.courses-container{
+    margin-left: 10em ;
+    margin-right: 10em;
+}
+
+.course{
+    display: block;
+    clear: both;
+    /* border: 1px solid #ccc;
+    border-radius: 8px; */
+}
+
+.course iframe{
+    float: left;
+    border-radius: 8px;
+}
+
+.course .chapter-photo{
+    float: left;
+    text-align: center;
+}
+
+.course .chapter-photo figure{
+    display: inline-block;        /* Limits the width of the figure to its contents */
+    text-align: center;           /* Center-aligns text within the figure */  
+    max-width: 35em;
+}
+
+.course .chapter-photo figure img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.course .chapter-photo figure figcaption {
+    max-width: 100%;
+    margin-top: 10px;             /* Adds some space between the image and caption */
+    word-wrap: break-word;        /* Wraps long words to prevent overflow */
+}
+
+.course picture img, .course picture source{
+    max-width: 28em;
+}
+
+.course-subinformations {
+    display: block;
+    clear: both;
+}
+
+.course-subinformations ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+}
