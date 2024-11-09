@@ -19,7 +19,6 @@ nav{
 
 header>a{
     margin: 0%;
-    /* position: absolute; */
 }
 article .stars,article .reviews,article .authors, article .instructor{
     float: right    ;
@@ -68,21 +67,12 @@ body,header,footer,main{
 /* Main tags and pseudo-classes*/
 body{
     display: grid;
-    grid:   "h h h"
+    grid:   "i h ."
             "m m m"
             "f f f";
     grid-template-columns: 1fr, 1fr, 1fr;
 }
-header{
-    grid-area: h;
-    display: grid;
-    grid-template-areas:    "logo title ."
-                            "logo nav .";
-    grid-template-columns: 3fr, 6fr, 3fr;
-}
-header a{
-    grid-column: 1/2;
-}
+
 
 /* header>img{
     position: absolute;
@@ -99,7 +89,6 @@ h1,h2,h3,h4,h5{
 nav{
     display: flex;
     justify-content: center;
-
 }
 /* Enlarge the text when hover */
 nav a:hover{
@@ -350,28 +339,62 @@ list-style-type:none ;
 }
 
 footer {
+    grid-area: f;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     
 }
 footer p{
+    grid-area: f;
     text-align: center;
 }
 .footer_contact_left {
+    grid-area: f;
     grid-column: 1/2;
     grid-row: 1/2;
 }
 
 .footer_contact_right {
+    grid-area: f;
     grid-column:3/4;
     grid-row: 1/2;
     
 }
 
 footer .copyright {
+    grid-area: f;
     grid-column: 2/3;
     grid-row: 2/2;
     font-size: 14px;
 }
 
+header{
+    grid-area: h;
+    display: grid;
+    grid-template-columns: 1fr,1fr, 1fr;
+    grid-template-rows: auto,auto;
+    
+}
+header > a {
+    grid-area: h;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+header img{
+    grid-area: i;
+    
+}
+header h1 + header h2+header  h3 +header  h4+ header h5+ header h6{
+    grid-area: h;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+header > nav{
+    grid-area: h;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+}
