@@ -348,3 +348,30 @@ list-style-type:none ;
     flex-flow: row wrap;
     justify-content: end;
 }
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    
+}
+footer p{
+    text-align: center;
+}
+.footer_contact_left {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.footer_contact_right {
+    grid-column:3/4;
+    grid-row: 1/2;
+    
+}
+
+footer .copyright {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    font-size: 14px;
+}
+
