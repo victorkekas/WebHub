@@ -416,3 +416,18 @@ header > nav{
 main{
     grid-area: m;
 }
+
+.index{
+    display:grid;
+}
+
+.about{
+    display: grid;
+}
+
+.nav_categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 0.5fr 0.5fr;
+}
+
