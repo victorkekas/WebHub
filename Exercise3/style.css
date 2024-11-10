@@ -1,12 +1,18 @@
 .prof_pic{
     height: 250px;
+    max-width: none;
 }
 .book_image , .video_image {
     height: 300px;
     float: inline-start;
     display: inline-flex;
 }
-
+.video_image {
+    height: 15em;
+    float: inline-start;
+    display: inline-flex;
+    max-width: 100%;
+}
 footer img{
     margin:0%;
     height: 25px;
@@ -67,7 +73,7 @@ body,header,footer,main{
 /* Main tags and pseudo-classes*/
 body{
     display: grid;
-    grid:   "i h ."
+    grid:   "h h h"
             "m m m"
             "f f f";
     grid-template-columns: 1fr, 1fr, 1fr;
@@ -86,10 +92,10 @@ h1,h2,h3,h4,h5{
 }
 
 /* Centralise the navigation menu */
-nav{
+/* nav{
     display: flex;
     justify-content: center;
-}
+} */
 /* Enlarge the text when hover */
 nav a:hover{
     font-size: 1.1em;
@@ -111,10 +117,6 @@ a:hover{
 a:active{
     color: #283618;
 }
-
-main{
-    grid-area: m;
-}
 section{}
 article{}
 
@@ -131,7 +133,9 @@ footer{
     grid-area: f;
 }
 picture{}
-img{}
+img{
+    /* max-width: 100%; */
+}
 source{}
 figure{}
 figcaption{}
@@ -175,11 +179,12 @@ figcaption{}
 
 /*  */
 .category {
-    /* background-color: #603916;
-    border: 2px solid black; */
+    /* background-color: #603916; */
+    /* border: 2px solid black; */
     padding: 1em;
-    width: 90em;
-    margin: auto;
+    /* max-width: auto; */
+    /* width: 9em; */
+    /* margin: auto; */
 }
 
 .category h3{
@@ -202,6 +207,7 @@ figcaption{}
     height: 13em;
     display: block;
     margin: auto;
+    max-width: none;
     width: 23em;
     /* width: auto; */
 }
@@ -372,29 +378,41 @@ footer .copyright {
 header{
     grid-area: h;
     display: grid;
-    grid-template-columns: 1fr,1fr, 1fr;
-    grid-template-rows: auto,auto;
-    
+    grid-template-columns: 1fr 2fr 1fr; /* Adjust middle column to be larger */
+    grid-template-rows: auto auto; /* Two rows for title and navigation */
+    justify-items: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
-header > a {
-    grid-area: h;
+
+header .webpage-logo{
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    text-align: center;
+    grid-row: 1 / 3; /* Span both rows */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
 }
-header img{
-    grid-area: i;
-    
-}
-header h1 + header h2+header  h3 +header  h4+ header h5+ header h6{
-    grid-area: h;
+/* header .webpage-logo img{
+    width: auto;
+    height: auto;
+} */
+
+header .title{
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     text-align: center;
+    align-self: center; 
 }
+
 header > nav{
-    grid-area: h;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    text-align: center;
+    text-align: center; 
+    align-self: center; /* Vertically center in the assigned row */
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    grid-area: m;
 }
