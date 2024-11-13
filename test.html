@@ -3,97 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Page</title>
-    <link rel="stylesheet" href="teststyle.css">
+    <title>Responsive Grid Layout with Images</title>
+    <style>
+        /* Basic reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #faf3e0;
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Grid items */
+        .grid-item {
+            background-color: #f0e6d2;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for images within grid items */
+        .grid-item picture {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Heading styling */
+        .grid-item h2 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #5c3d2e;
+        }
+        
+        .grid-item p {
+            color: #6d4c41;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Course Title</h1>
-    </header>
 
-    <!-- Description Section -->
-    <section class="description-section">
-        <div class="description">
-            <p>This is a brief description of the course content.</p>
-        </div>
-        <div class="image-toc">
-            <div class="image">
-                <img src="image.jpg" alt="Course Image">
-            </div>
-            <div class="toc">
-                <h2>Table of Contents</h2>
-                <ul>
-                    <li>Topic 1</li>
-                    <li>Topic 2</li>
-                    <li>Topic 3</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <h1>Responsive 3-Column Grid Layout with Images</h1>
 
-    <!-- Lecture Section -->
-    <section class="lectures">
-        <div class="lecture">
-            <h3>Lecture 1</h3>
-            <div class="lecture-content">
-                <div class="video">
-                    <p>Video Placeholder</p>
-                </div>
-                <div class="text-desc">
-                    <p>This is the lecture description.</p>
-                </div>
-            </div>
-            <div class="interactive">
-                <p>Interactive / Quiz</p>
-            </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <picture>
+                <source srcset="image1-small.jpg" media="(max-width: 600px)">
+                <source srcset="image1-medium.jpg" media="(max-width: 1200px)">
+                <img src="image1-large.jpg" alt="Programming Languages">
+            </picture>
+            <h2>Programming Languages</h2>
+            <p>Content about programming languages goes here.</p>
         </div>
-        <div class="lecture">
-            <h3>Lecture 1</h3>
-            <div class="lecture-content">
-                <div class="video">
-                    <p>Video Placeholder</p>
-                </div>
-                <div class="text-desc">
-                    <p>This is the lecture description.</p>
-                </div>
-            </div>
-            <div class="interactive">
-                <p>Interactive / Quiz</p>
-            </div>
+        
+        <div class="grid-item">
+            <picture>
+                <source srcset="image2-small.jpg" media="(max-width: 600px)">
+                <source srcset="image2-medium.jpg" media="(max-width: 1200px)">
+                <img src="image2-large.jpg" alt="Software Engineering">
+            </picture>
+            <h2>Software Engineering</h2>
+            <p>Content about software engineering goes here.</p>
         </div>
-        <div class="lecture">
-            <h3>Lecture 1</h3>
-            <div class="lecture-content">
-                <div class="video">
-                    <p>Video Placeholder</p>
-                </div>
-                <div class="text-desc">
-                    <p>This is the lecture description.</p>
-                </div>
-            </div>
-            <div class="interactive">
-                <p>Interactive / Quiz</p>
-            </div>
+
+        <div class="grid-item">
+            <picture>
+                <source srcset="image3-small.jpg" media="(max-width: 600px)">
+                <source srcset="image3-medium.jpg" media="(max-width: 1200px)">
+                <img src="image3-large.jpg" alt="Artificial Intelligence">
+            </picture>
+            <h2>Artificial Intelligence</h2>
+            <p>Content about artificial intelligence goes here.</p>
         </div>
-        <div class="lecture">
-            <h3>Lecture 1</h3>
-            <div class="lecture-content">
-                <div class="video">
-                    <p>Video Placeholder</p>
-                </div>
-                <div class="text-desc">
-                    <p>This is the lecture description.</p>
-                </div>
-            </div>
-            <div class="interactive">
-                <p>Interactive / Quiz</p>
-            </div>
+
+        <div class="grid-item">
+            <picture>
+                <source srcset="image4-small.jpg" media="(max-width: 600px)">
+                <source srcset="image4-medium.jpg" media="(max-width: 1200px)">
+                <img src="image4-large.jpg" alt="Data Science">
+            </picture>
+            <h2>Data Science</h2>
+            <p>Content about data science goes here.</p>
         </div>
-        <!-- More Lectures Placeholder -->
-        <div class="more-lectures">
-            <p>More Lectures Coming Soon</p>
+
+        <div class="grid-item">
+            <picture>
+                <source srcset="image5-small.jpg" media="(max-width: 600px)">
+                <source srcset="image5-medium.jpg" media="(max-width: 1200px)">
+                <img src="image5-large.jpg" alt="Mathematics">
+            </picture>
+            <h2>Mathematics</h2>
+            <p>Content about mathematics goes here.</p>
         </div>
-    </section>
+
+        <div class="grid-item">
+            <picture>
+                <source srcset="image6-small.jpg" media="(max-width: 600px)">
+                <source srcset="image6-medium.jpg" media="(max-width: 1200px)">
+                <img src="image6-large.jpg" alt="Physics">
+            </picture>
+            <h2>Physics</h2>
+            <p>Content about physics goes here.</p>
+        </div>
+    </div>
+
 </body>
 </html>
