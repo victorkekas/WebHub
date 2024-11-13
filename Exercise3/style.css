@@ -132,7 +132,7 @@ img{
     /* max-width: 100%; */
 }
 source{}
-figure{}
+
 figcaption{}
 
 /* Classes and IDs*/
@@ -441,10 +441,6 @@ main{
     display:grid;
 }
 
-.about{
-    display: grid;
-}
-
 
 /*  Used in:    categories.html
     Purpose:    Puts the link in a separate line, under the previous context.
@@ -491,3 +487,18 @@ main{
 .description{
     text-align: start;
 }
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    width: 100%;
+    text-align: center;
+}
+
+.person_left, .person_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
