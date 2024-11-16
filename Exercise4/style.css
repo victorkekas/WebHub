@@ -524,44 +524,68 @@ main{
         grid-template-columns: 1fr, 1fr;
     }
     
-    /* Change Header */
+    /* Make header 2 collumns */
     header{
         grid-template-columns: 1fr 3fr;
     }
-
-    header .webpage-logo{}
-
+/* Place title in corent place */
     header .title{
         grid-column: 2 / 5;
     }
-    
+
+    /* Make nav smaller  */
     h1{
         font-size: 1.7em;
     }
+    /* Make nav smaller */
     h2{
         font-size: 1.2em;
     }
-
+    /* Place nav in corent spot and make it smaller  */
     header > nav{
         grid-column: 2 / 5;
         font-size: 1.3em;
     }
 
-    /* Change Footer */
+    /* Make footer 2 columns  */
     footer {
         grid-template-columns: 1fr 1fr;
     }
-    .footer_contact_left {
-    }
-    
+    /* Place contact info correctly   */
     .footer_contact_right {
         grid-column:2/3;
         
     }
-    
+    /* Place copyright correctly  */
     footer .copyright {
         grid-column: 1/3;
     }
+
+    /* Make grid 2 columns instead of 3 */
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    /* Place Lune in center in second line */
+    .person_left_luna{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    /* Make the description go to center  */
+    .person_left_luna p{
+        text-align: center;
+    }
+    /* Fix person position  */
+    .person_right{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    /* Fix person position  */
+    .person_left{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
 }
 
 /* CSS Styling for Mobile */
