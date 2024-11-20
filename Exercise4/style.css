@@ -593,11 +593,11 @@ main{
         grid-template-columns: repeat(2, 1fr);
        }
 
-    .pythonMain {
+    .pythonMain ,.nnMain {
         display: grid;
         grid-template-columns: 1fr 1fr; 
     }
-    #pythonvideoimage{
+    #pythonvideoimage {
         /* float :left;
         height: auto; */
         /* display: inline-block; */
@@ -613,12 +613,19 @@ main{
         grid-column: 1/3;
         grid-template-columns: repeat(2, 1fr);
     }
-    .course-description > p{
-        display: block;
+    /* .course-description > p{
+        display: flex;
         text-align: justify; 
         overflow: hidden;
         flex-wrap: wrap;
+    } */
+    #nnimage{
+        float :left;
     }
+    .nnMain .description{
+    float :left;
+    }
+
 }
 
 
