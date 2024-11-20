@@ -585,8 +585,17 @@ main{
         grid-column: 2/3;
         grid-row: 1/2;
     }
-
+    .nav_categories{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }#books ul , #lectures ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       }
+       
 }
+
+
 
 /* CSS Styling for Mobile */
 @media only screen and (max-width: 620px) {
