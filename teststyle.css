@@ -1,0 +1,92 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+/* Logo Styling */
+.webpage-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Title Styling */
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.title h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Show navigation when checkbox is checked */
+#menu-toggle:checked ~ .nav-menu {
+    display: block;
+}
