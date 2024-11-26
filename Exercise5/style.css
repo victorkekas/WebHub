@@ -771,9 +771,37 @@ display: none;
         grid-column:1/-1;
         grid-row: 3/4;
     }
-    
+
+/* Make he main a grid */
+}.supmain {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr; /* Center column takes more space */
+    grid-template-rows: 1fr auto; /* Main form and additional text are stacked */
 }
 
+/* Place Form in correct place  and make the text good looking */
+#signupForm {
+    grid-column: 2 / 3; /* Place form in the center column */
+    grid-row: 1 / 2; /* Form is in the first row */
+    text-align: center;
+    align-items: center; /* Align items vertically in the grid */
+    justify-items: center; /* Center items horizontally */
+}
+fieldset{
+    border-style: dotted;
+    border-color: #603916;
+}
+/* Make the in objects to be aligned correctly  */
+.in {
+    display: flex;
+    flex-direction: column; 
+}
+/* Place p on wanted place */
+.supmain p {
+    grid-column: 2 / 3; 
+    grid-row: 2 / 3; 
+    text-align: center;
+}
 
 
 

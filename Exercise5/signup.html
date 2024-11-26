@@ -20,7 +20,7 @@
             <img class="topimage" src="../Photos/hot-chocolate.png" alt="Error Loading Image">
         </a>
         <div class="title">
-            <h1>Create an account WebHub</h1>
+            <h1>Create an WebHub account</h1>
         </div>
 
         <nav>
@@ -38,13 +38,54 @@
                 <a href="index.html">Home</a>
                 <a href="categories.html">Categories</a>
                 <a href="about us.html">About Us</a>
-                <a href="login.html">Login - Logup</a>
+                <a href="login.html">Login - Signup</a>
             </div>
         </nav>
     </header>
 
 
 
+    <main class="supmain">
+        <section id="signupForm">
+            <form>
+                <fieldset>
+                    <legend>Mandatory Information</legend>
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
+                   </fieldset>
+                   <fieldset>
+                        <legend>Contact Info</legend>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" required>
+                    </fieldset>
+                        <label for="homeaddress">Home Address</label>
+                        <input type="text" id="homeaddress" name="homeaddress" placeholder="Enter your home address">
+                        <label for="bday">Date of Birth</label>
+                        <input type="date" id="bday" name="bday" placeholder="Enter your birthday" required>
+                </fieldset>
+                <fieldset>
+                    <legend>User Info</legend>
+                    <label for="Username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your Username">
+                    <label for="Password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password">
+                </fieldset>
+                <fieldset class="contactcheck">
+                    
+                </fieldset>
+                
+            </form>
+        </section>
+
+        <p>Already ahave an account?<a href="login.html">Login here</a></p>
+    </main>
+        
 
 
 
