@@ -49,41 +49,70 @@
         <section id="signupForm">
             <form>
                 <fieldset>
-                    <legend>Mandatory Information</legend>
-                    <fieldset>
-                        <legend>Personal Info</legend>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your first name" required>
-                        <label for="surname">Surname</label>
-                        <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
-                   </fieldset>
+                    <legend>Personal Info</legend>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="grid-item">
+                            <label for="surname">Surname</label>
+                            <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="grid-item">
+                            <label for="homeaddress">Home Address</label>
+                            <input type="text" id="homeaddress" name="homeaddress" placeholder="Enter your home address">
+                        </div>
+                        <div class="grid-item">
+                            <label for="bday">Date of Birth</label>
+                            <input type="date" id="bday" name="bday" placeholder="Enter your birthday" required>
+                        </div>
+                    </div>
+                </fieldset>
                    <fieldset>
                         <legend>Contact Info</legend>
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        <label for="phonenumber">Phone Number</label>
-                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" required>
+                        <div class="grid-items"><label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="grid-items">
+                            <label for="phonenumber">Phone Number</label>
+                            <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" required>
+                        </div>
                     </fieldset>
-                        <label for="homeaddress">Home Address</label>
-                        <input type="text" id="homeaddress" name="homeaddress" placeholder="Enter your home address">
-                        <label for="bday">Date of Birth</label>
-                        <input type="date" id="bday" name="bday" placeholder="Enter your birthday" required>
-                </fieldset>
                 <fieldset>
                     <legend>User Info</legend>
-                    <label for="Username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your Username">
-                    <label for="Password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your Password">
+                    <div class="grid-items"><label for="Username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your Username">
+                    </div>
+                    <div class="grid-items"><label for="Password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your Password">
+                    </div>
+                    
                 </fieldset>
                 <fieldset class="contactcheck">
-                    
+                    <legend>Preferred Contact Method</legend>
+                    <div class="form-group">
+                        <img class="formimage" src="../Photos/email.png" alt="Error Loading Image">
+                        <input type="checkbox" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <img class="formimage" src="../Photos/sms.png" alt="Error Loading Image">
+                        <input type="checkbox" name="sms" id="sms">
+                    </div>
+                    <div class="form-group">
+                        <img class="formimage" src="../Photos/viber.png" alt="Error Loading Image">
+                        <input type="checkbox" name="viber" id="viber">
+                    </div>
+                    <div class="form-group">
+                        <img class="formimage" src="../Photos/whatsapp.png" alt="Error Loading Image">
+                        <input type="checkbox" name="whatsapp" id="whatsapp">
+                    </div>
                 </fieldset>
                 
             </form>
         </section>
 
-        <p>Already ahave an account?<a href="login.html">Login here</a></p>
+        <p>Already have an account?<a href="login.html">Login here</a></p>
     </main>
         
 

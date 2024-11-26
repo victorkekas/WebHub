@@ -803,8 +803,38 @@ fieldset{
     text-align: center;
 }
 
+/* Make the grid position */
+.contactcheck {
+    display: grid;
+     grid-template-columns: repeat(4, auto); /*repeat by 4 cause we have 4 means of contact  */
+}
+/* make them flex  */
+.contactcheck .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* make the images smaller */
+.contactcheck .formimage {
+    height: 3em;
+    width: min-content;
+}
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+}
 
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.grid-item label, .grid-item input {
+    width: 100%;
+    box-sizing: border-box;
+}
 
 
 
