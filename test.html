@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teststyle.css">
     <title>Responsive Grid Layout with Images</title>
-    <style>
+    <!-- <style>
         /* Basic reset */
         * {
             box-sizing: border-box;
@@ -62,9 +63,38 @@
         .grid-item p {
             color: #6d4c41;
         }
-    </style>
+    </style> -->
+    
 </head>
 <body>
+
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="index.html" class="webpage-logo">
+            <img class="topimage" src="./Photos/hot-chocolate.png" alt="Logo">
+        </a>
+    
+        <!-- Title -->
+        <div class="title">
+            <h1>Welcome to Web Hub</h1>
+            <h2>A Website for your daily e-learning enthusiast</h2>
+        </div>
+    
+        <!-- Hamburger Menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="about us.html">About Us</a>
+        </nav>
+    </header>
 
     <h1>Responsive 3-Column Grid Layout with Images</h1>
 
