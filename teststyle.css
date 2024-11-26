@@ -90,3 +90,28 @@ body {
 #menu-toggle:checked ~ .nav-menu {
     display: block;
 }
+
+/*Method 1*/
+.scrollable-text {
+    max-width: 600px; 
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 12px; /* Increased padding slightly for better spacing */
+    background-color: transparent; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for smoother appearance */
+    line-height: 1.6;
+    margin: 1.3em auto; /* Center-align on the page */
+    box-shadow: 0 4px 6px rgb(247, 6, 6), 0 1px 3px rgba(0, 0, 0, 0.06); /* Soft shadow effect */
+    scrollbar-width: none; /* Hide scrollbar initially */
+}
+
+.scrollable-text p {
+    margin-bottom: 10px; 
+    text-align: justify; 
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow for text readability */
+}
+
+/* Add hover effect to highlight the container when interacted with */
+.scrollable-text:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
