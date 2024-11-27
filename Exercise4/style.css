@@ -84,6 +84,7 @@ body{
 h1,h2,h3,h4,h5{
     text-align:center;
     color: #603916;
+    margin-bottom: 0.3em;/*To be a little free*/
 }
 
 /* Centralise the navigation menu */
@@ -526,7 +527,7 @@ display: none;
 @media only screen and (max-width: 960px) {
     /* Change body */
     body{
-        background-color: firebrick;
+        /* background-color: firebrick; */
         display: grid;
         grid:   "h h"
                 "m m"
@@ -658,7 +659,7 @@ display: none;
         margin-right: 1em;
     }
     body{
-        background-color: aqua;
+        /* background-color: aqua; */
         display: grid;
         grid:   "h"
                 "m"
@@ -795,6 +796,15 @@ display: none;
     .nav_categories{
         grid-template-columns: 1fr;
     }
+    .category_image{
+        margin-right: 0em;
+    }
+    .category_image img, .category_image source{
+        margin: auto;
+    }
+    .category_links li{
+        text-align:center;
+    }
 
     /*about.us*/
     .about{
@@ -819,12 +829,11 @@ display: none;
         max-width: 600px; 
         max-height: 200px;
         overflow-y: auto;
-        padding: 8px; /* Reduced padding for minimal prominence */
-        background-color: transparent; /* Matches the page's background */
-        border: none; /* Removes the box border */
+        padding: 8px; 
+        background-color: transparent; 
+        border: none; 
         margin: 0.3em;
         scrollbar-width: none;
-        /* -ms-overflow-style: none; */
     }
     .scrollable-text:hover {
         /*Show where the text boarder is when hovering*/
@@ -863,6 +872,7 @@ display: none;
         display: block;
     }
 }
+
 
 
 

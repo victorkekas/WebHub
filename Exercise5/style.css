@@ -84,6 +84,7 @@ body{
 h1,h2,h3,h4,h5{
     text-align:center;
     color: #603916;
+    margin-bottom: 0.3em;/*To be a little free*/
 }
 
 /* Centralise the navigation menu */
@@ -126,7 +127,7 @@ li{}
 strong{}
 picture{}
 img{
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 source{}
 
@@ -526,7 +527,7 @@ display: none;
 @media only screen and (max-width: 960px) {
     /* Change body */
     body{
-        background-color: firebrick;
+        /* background-color: firebrick; */
         display: grid;
         grid:   "h h"
                 "m m"
@@ -598,10 +599,11 @@ display: none;
     .nav_categories{
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }#books ul , #lectures ul{
+    }
+    #books ul , #lectures ul{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-       }
+    }
 
     .pythonMain ,.nnMain {
         display: grid;
@@ -652,8 +654,12 @@ display: none;
         margin: 0.05em;
         padding: 0.03em;
     }
+    p{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
     body{
-        background-color: aqua;
+        /* background-color: aqua; */
         display: grid;
         grid:   "h"
                 "m"
@@ -671,7 +677,9 @@ display: none;
         grid-column: 1/2;
         grid-row: 1/2;
     }
-
+    .topimage{
+        max-width: 200%;
+    }
     header .title{
         grid-column: 2/5;
         grid-row: 1/2;
@@ -718,7 +726,7 @@ display: none;
     
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -300%;
         z-index: 10;
         width: 300px;
     
@@ -772,8 +780,102 @@ display: none;
         grid-row: 3/4;
     }
 
+    /*index.html*/
+    /*Decrease the margin because there is less space for the same text*/
+    .index section{
+        margin: 2em;
+    }
+    .makesmaller{
+        margin: 0em;
+    }
+    /*The links inside the texts must blend-in naturally*/
+    main a{
+        margin: 0em;
+        padding: 0em;
+    }
+
+    /*categories.html*/
+    .nav_categories{
+        grid-template-columns: 1fr;
+    }
+    .category_image{
+        margin-right: 0em;
+    }
+    .category_image img, .category_image source{
+        margin: auto;
+    }
+    .category_links li{
+        text-align:center;
+    }
+
+    /*about.us*/
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .person_right, .person_left, .person_left_luna{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .person_left{
+        grid-row: 2/3;
+    }
+    .person_left_luna{
+        grid-row: 3/4;
+    }
+
+    /*python.html && nn.html*/
+    #books ul, #lectures ul{
+        grid-template-columns: 1fr;
+    }
+    .scrollable-text {
+        max-width: 600px; 
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 8px; 
+        background-color: transparent; 
+        border: none; 
+        margin: 0.3em;
+        scrollbar-width: none;
+    }
+    .scrollable-text:hover {
+        /*Show where the text boarder is when hovering*/
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .scrollable-text p {
+        margin-bottom: 10px; 
+        text-align: justify; 
+        /* Optional: Add a subtle text shadow for better readability */
+        text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    /*python_mit_lecture.html && nn_and_dl.html*/
+    .pythonMain, .nnMain{
+        grid-template-columns: 1fr;
+    }
+    .course-description, .tables-of-content, .courses-container{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .tables-of-content{
+        grid-row: 2/3;
+    } 
+    .courses-container{
+        grid-row: 3/4;
+        grid-template-columns: 1fr;
+    }
+    .course iframe{
+        float: none;
+        align-items: center;
+        display: block;
+        margin: auto;
+    }
+    .course p{
+        display: block;
+    }
+}
 /* Make he main a grid */
-}.supmain {
+.supmain {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr; /* Center column takes more space */
     grid-template-rows: 1fr auto; /* Main form and additional text are stacked */
