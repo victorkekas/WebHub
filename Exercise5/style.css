@@ -928,9 +928,9 @@ fieldset{
 }
 
 .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start;  */
 }
 
 .grid-item label, .grid-item input {

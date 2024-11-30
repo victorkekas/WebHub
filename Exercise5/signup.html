@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
     <meta name="keywords" content="HTML, CSS, JavaScript, e-Learning, Computer Science, Coding">
     <meta name="description" content="E-learning Web Site">
     <meta name="authors" content="Nikolas Vaitsis (3210017), Georgios Viktor Kekas (3210074) ">
@@ -62,6 +63,8 @@
                         <div class="grid-item">
                             <label for="homeaddress">Home Address</label>
                             <input type="text" id="homeaddress" name="homeaddress" placeholder="Enter your home address">
+                            <label for="homeaddressnumber">Home Address Number</label>
+                            <input type="number" id="homeaddressnumber" name="homeaddress" placeholder="Enter your home address number">
                         </div>
                         <div class="grid-item">
                             <label for="bday">Date of Birth</label>
@@ -76,19 +79,26 @@
                         </div>
                         <div class="grid-items">
                             <label for="phonenumber">Phone Number</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="+30">Greece (+30)</option>
+                                <option value="+1">USA (+1)</option>
+                                <option value="+44">UK (+44)</option>
+                                <option value="+91">India (+91)</option>
+                            </select>
                             <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" required>
                         </div>
                     </fieldset>
                 <fieldset>
                     <legend>User Info</legend>
-                    <div class="grid-items"><label for="Username">Username</label>
+                    <div class="grid-items"><label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter your Username">
                     </div>
-                    <div class="grid-items"><label for="Password">Password</label>
+                    <div class="grid-items"><label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter your Password">
                     </div>
-                    <div class="grid-items"><label for="Password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your Password">
+                    <div class="grid-items"><label for="passwordCheck">Password</label>
+                        <input type="password" id="passwordCheck" name="password" placeholder="Enter your Password">
                     </div>
                     
                 </fieldset>
