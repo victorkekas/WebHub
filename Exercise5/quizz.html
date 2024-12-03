@@ -42,7 +42,61 @@
             </div>
         </nav>
     </header>
-    
+    <main>
+        <form action="submit_quiz.html" method="post">
+            <fieldset>
+                <legend>User Profile Questionnaire</legend>
+                <!-- Question 1.1 -->
+                <label for="education">1. What is your highest level of education?</label>
+                <select id="education" name="education" required>
+                    <option value="">-- Select --</option>
+                    <option value="highschool">High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">Ph.D.</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <!-- Question 1.2 -->
+                <label for="field">2. Which field of study best describes your background?</label>
+                <select id="field" name="field" required>
+                    <option value="">-- Select --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="arts">Arts</option>
+                    <option value="business">Business</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <!-- Question 2 -->
+                <p>2. What is your primary motivation for learning?</p>
+                <label><input type="radio" name="motivation" value="career" required> Career Advancement</label>
+                <label><input type="radio" name="motivation" value="skills" required> Gaining New Skills</label>
+                <label><input type="radio" name="motivation" value="interest" required> Personal Interest</label>        
+                <!-- Question 3 -->
+                <label for="skills">3. Which technical skills do you currently possess?</label>
+                <textarea id="skills" name="skills" placeholder="E.g., Python, Data Analysis, Web Development"></textarea>        
+                <!-- Question 4 -->
+                <p>4. Which areas would you like to improve?</p>
+                <label><input type="checkbox" name="improve" value="coding"> Coding</label>
+                <label><input type="checkbox" name="improve" value="data-analysis"> Data Analysis</label>
+                <label><input type="checkbox" name="improve" value="machine-learning"> Machine Learning</label>
+                <label><input type="checkbox" name="improve" value="soft-skills"> Soft Skills</label>
+                <!-- Question 5 -->
+                <label for="time">5. How much time can you dedicate weekly to learning?</label>
+                <select id="time" name="time" required>
+                    <option value="">-- Select --</option>
+                    <option value="1-2">1-2 hours</option>
+                    <option value="3-5">3-5 hours</option>
+                    <option value="6-10">6-10 hours</option>
+                    <option value="10+">10+ hours</option>
+                </select>
+                <!-- Submit Button -->
+                <button type="submit">Submit Quiz</button>
+            </fieldset>
+        </form>
+    </main>
 
     <footer>
         <div class="footer_contact_right" >
