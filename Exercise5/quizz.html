@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -10,10 +11,12 @@
     <link rel="shortcut icon" type="x-icon" href="../Photos/hot-chocolate.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>WH Login</title>
-    
 </head>
+
 <body>
     <header>
         <a href="index.html" class="webpage-logo">
@@ -26,15 +29,20 @@
         <nav>
             <input type="checkbox" id="sidebar-active">
             <label for="sidebar-active" class="open-sidebar-button">
-              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
             </label>
             <label id="overlay" for="sidebar-active"></label>
             <div class="links-container">
-              <label for="sidebar-active" class="close-sidebar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-              </label>
-        
-              <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </label>
+
+                <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
                 <a href="index.html">Home</a>
                 <a href="categories.html">Categories</a>
                 <a href="about us.html">About Us</a>
@@ -43,55 +51,99 @@
         </nav>
     </header>
     <main>
-        <form action="submit_quiz.html" method="post">
+        <h1>User Profile Questionnaire</h1>
+        <form action="login.html" method="post">
             <fieldset>
-                <legend>User Profile Questionnaire</legend>
-                <!-- Question 1.1 -->
-                <label for="education">1. What is your highest level of education?</label>
-                <select id="education" name="education" required>
-                    <option value="">-- Select --</option>
-                    <option value="highschool">High School</option>
-                    <option value="bachelor">Bachelor's Degree</option>
-                    <option value="master">Master's Degree</option>
-                    <option value="phd">Ph.D.</option>
-                    <option value="other">Other</option>
-                </select>
-                
-                <!-- Question 1.2 -->
-                <label for="field">2. Which field of study best describes your background?</label>
-                <select id="field" name="field" required>
-                    <option value="">-- Select --</option>
-                    <option value="cs">Computer Science</option>
-                    <option value="engineering">Engineering</option>
-                    <option value="arts">Arts</option>
-                    <option value="business">Business</option>
-                    <option value="other">Other</option>
-                </select>
+                <legend>Education Background</legend>
+                <!-- Question 1 -->
+                <div class="form-question">
+                    <label for="education">1. What is your highest level of education?</label>
+                    <select id="education" name="education" required>
+                        <option value="">-- Select --</option>
+                        <option value="highschool">High School</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="phd">Ph.D.</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="form-question">
+                    <label for="field">2. Which field of study best describes your background?</label>
+                    <select id="field" name="field" required>
+                        <option value="">-- Select --</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="arts">Arts</option>
+                        <option value="business">Business</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- Question 3 -->
+                <div class="form-question">
+                    <label for="certifications">3. Did you participate in any additional certifications or training
+                        programs?</label>
+                    <label><input type="checkbox" name="certifications" value="online-courses"> Online Courses</label>
+                    <label><input type="checkbox" name="certifications" value="bootcamps"> Bootcamps</label>
+                    <label><input type="checkbox" name="certifications" value="internships"> Internships</label>
+                    <label><input type="checkbox" name="certifications" value="none"> None</label>
+                    <!-- Text Area for Additional Details -->
+                    <textarea id="certification-details" name="certification-details"
+                        placeholder="Describe your certifications here..." maxlength="200"></textarea>
+                </div>
+                <!-- Question 4 -->
+                <div class="form-question">
+                    <p>4. Have you studied or taken courses in a language other than your native language?</p>
+                    <label><input type="radio" name="language-courses" value="yes" required> Yes</label><br>
+                    <label><input type="radio" name="language-courses" value="no" required> No</label>
+                </div>
+                <!-- Question 5 -->
+                <div class="form-question">
+                    <label for="skills">5. Which technical skills do you currently possess?</label>
+                    <textarea id="skills" name="skills"
+                        placeholder="E.g., Python, Data Analysis, Web Development"></textarea>
+                </div>
             </fieldset>
             <fieldset>
-                <!-- Question 2 -->
-                <p>2. What is your primary motivation for learning?</p>
-                <label><input type="radio" name="motivation" value="career" required> Career Advancement</label>
-                <label><input type="radio" name="motivation" value="skills" required> Gaining New Skills</label>
-                <label><input type="radio" name="motivation" value="interest" required> Personal Interest</label>        
-                <!-- Question 3 -->
-                <label for="skills">3. Which technical skills do you currently possess?</label>
-                <textarea id="skills" name="skills" placeholder="E.g., Python, Data Analysis, Web Development"></textarea>        
-                <!-- Question 4 -->
-                <p>4. Which areas would you like to improve?</p>
-                <label><input type="checkbox" name="improve" value="coding"> Coding</label>
-                <label><input type="checkbox" name="improve" value="data-analysis"> Data Analysis</label>
-                <label><input type="checkbox" name="improve" value="machine-learning"> Machine Learning</label>
-                <label><input type="checkbox" name="improve" value="soft-skills"> Soft Skills</label>
-                <!-- Question 5 -->
-                <label for="time">5. How much time can you dedicate weekly to learning?</label>
-                <select id="time" name="time" required>
-                    <option value="">-- Select --</option>
-                    <option value="1-2">1-2 hours</option>
-                    <option value="3-5">3-5 hours</option>
-                    <option value="6-10">6-10 hours</option>
-                    <option value="10+">10+ hours</option>
-                </select>
+                <legend>Learning Goals</legend>
+                <!-- Question 6 -->
+                <div class="form-question">
+                    <p>6. What is your primary motivation for learning?</p>
+                    <label><input type="radio" name="motivation" value="career" required> Career Advancement</label>
+                    <label><input type="radio" name="motivation" value="skills" required> Gaining New Skills</label>
+                    <label><input type="radio" name="motivation" value="interest" required> Personal Interest</label>
+                </div>
+                <!-- Question 7 -->
+                <div class="form-question">
+                    <p>7. Which areas would you like to improve?</p>
+                    <label><input type="checkbox" name="improve" value="coding"> Coding</label>
+                    <label><input type="checkbox" name="improve" value="data-analysis"> Data Analysis</label>
+                    <label><input type="checkbox" name="improve" value="machine-learning"> Machine Learning</label>
+                    <label><input type="checkbox" name="improve" value="soft-skills"> Soft Skills</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Learning Habits and Resources</legend>
+                <!-- Question 8 -->
+                <div class="form-question">
+                    <label for="time">8. How much time can you dedicate weekly to learning?</label>
+                    <select id="time" name="time" required>
+                        <option value="">-- Select --</option>
+                        <option value="1-2">1-2 hours</option>
+                        <option value="3-5">3-5 hours</option>
+                        <option value="6-10">6-10 hours</option>
+                        <option value="10+">10+ hours</option>
+                    </select>
+                </div>
+                <!-- Question 9 -->
+                <div class="form-question">
+                    <label for="learning-methods">9. Which learning methods do you prefer?</label>
+                    <label><input type="checkbox" name="learning-methods" value="reading"> Reading</label>
+                    <label><input type="checkbox" name="learning-methods" value="writing"> Writing (Exercises)</label>
+                    <label><input type="checkbox" name="learning-methods" value="visualizations"> Visualizations</label>
+                    <label><input type="checkbox" name="learning-methods" value="auditory"> Auditory Learning</label>
+                </div>
                 <!-- Submit Button -->
                 <button type="submit">Submit Quiz</button>
             </fieldset>
@@ -99,25 +151,36 @@
     </main>
 
     <footer>
-        <div class="footer_contact_right" >
+        <div class="footer_contact_right">
             <p>Contact Nikos</p>
-            <a href="https://www.linkedin.com/in/nikolaos-vaitsis//" target="_blank"><img src="../Photos/linkedin.png" alt="Error Loading Photo"></a>
-            <a href="mailto:nikolasvaitsis@gmail.com" target="_blank"><img src="../Photos/email.png" alt="Error Loading Photo"></a>
-            <a href="https://wa.me/306971964072" target="_blank"><img src="../Photos/whatsapp.png" alt="Error Loading Photo"></a>
-            <a href="https://www.instagram.com/nikolas_vaitsis/" target="_blank"><img src="../Photos/instagram.png" alt="Error Loading Photo"></a>
-            <a href="https://www.facebook.com/nikolas.vaitsis" target="_blank"><img src="../Photos/facebook.png" alt="Error Loading Photo"></a>
+            <a href="https://www.linkedin.com/in/nikolaos-vaitsis//" target="_blank"><img src="../Photos/linkedin.png"
+                    alt="Error Loading Photo"></a>
+            <a href="mailto:nikolasvaitsis@gmail.com" target="_blank"><img src="../Photos/email.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://wa.me/306971964072" target="_blank"><img src="../Photos/whatsapp.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.instagram.com/nikolas_vaitsis/" target="_blank"><img src="../Photos/instagram.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.facebook.com/nikolas.vaitsis" target="_blank"><img src="../Photos/facebook.png"
+                    alt="Error Loading Photo"></a>
         </div>
-        
+
         <div class="footer_contact_left">
             <p>Contact Victor</p>
-            <a href="https://www.linkedin.com/in/georgios-viktor-kekas/" target="_blank"><img src="../Photos/linkedin.png" alt="Error Loading Photo"></a>
-            <a href="mailto:gvictor.kekas@gmail.com" target="_blank"><img src="../Photos/email.png" alt="Error Loading Photo"></a>
-            <a href="https://wa.me/306948920844" target="_blank"><img src="../Photos/whatsapp.png" alt="Error Loading Photo"></a>
-            <a href="https://www.instagram.com/victor_kekas/" target="_blank"><img src="../Photos/instagram.png" alt="Error Loading Photo"></a>
-            <a href="https://www.facebook.com/profile.php?id=100014815927157" target="_blank"><img src="../Photos/facebook.png" alt="Error Loading Photo"></a>
+            <a href="https://www.linkedin.com/in/georgios-viktor-kekas/" target="_blank"><img
+                    src="../Photos/linkedin.png" alt="Error Loading Photo"></a>
+            <a href="mailto:gvictor.kekas@gmail.com" target="_blank"><img src="../Photos/email.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://wa.me/306948920844" target="_blank"><img src="../Photos/whatsapp.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.instagram.com/victor_kekas/" target="_blank"><img src="../Photos/instagram.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.facebook.com/profile.php?id=100014815927157" target="_blank"><img
+                    src="../Photos/facebook.png" alt="Error Loading Photo"></a>
         </div>
-            
-        <p class="copyright"> &copyCOPYRIGHT 2024-2025</p> 
+
+        <p class="copyright"> &copyCOPYRIGHT 2024-2025</p>
     </footer>
 </body>
+
 </html>
