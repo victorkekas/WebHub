@@ -421,15 +421,25 @@ header .title{
     align-self: center; 
 }
 
-header > nav{
+ nav{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     text-align: center; 
     align-self: center; /* Vertically center in the assigned row */
-    display: flex;
     justify-content: center;
 }
-
+/*The links in nav spilt in rows without breaking in half*/
+.navigation-links-container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content:space-around;
+    text-align: center;
+}
+/*The links in nav spilt in rows without breaking in half*/
+.navigation-links-container>a{
+    margin: 0em;
+}
 main{
     grid-area: m;
 }
