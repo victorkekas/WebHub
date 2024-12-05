@@ -87,4 +87,37 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
         }
     });
+    // Select all checkboxes within the contact-check container
+    const checkboxes = document.querySelectorAll('.contact-check input[type="checkbox"]');
+
+    // Add an event listener to each checkbox
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            // Find the associated label using the 'for' attribute
+            const label = document.querySelector(`label[for="${checkbox.id}"]`);
+            const image = label.querySelector('img'); // Find the image inside the label
+
+            if (checkbox.checked) {
+                // Remove grayscale when the checkbox is checked
+                image.style.filter = 'grayscale(0%)';
+            } else {
+                // Apply grayscale when the checkbox is unchecked
+                image.style.filter = 'grayscale(100%)';
+            }
+        });
+    });
+    const images = document.querySelectorAll('.contact-group img');
+    // Function to handle hover (mouseover and mouseout)
+    images.forEach((img) => {
+        img.addEventListener('mouseover', function () {
+            this.style.filter = 'grayscale(0%)'; // Remove grayscale on hover
+        });
+
+        img.addEventListener('mouseout', function () {
+            const checkbox = this.closest('label').previousElementSibling;
+            if (!checkbox.checked) {
+                this.style.filter = 'grayscale(100%)'; // Return to grayscale if not checked
+            }
+        });
+    });
 });

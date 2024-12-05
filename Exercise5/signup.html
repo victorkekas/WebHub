@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -11,10 +12,13 @@
     <link rel="shortcut icon" type="x-icon" href="../Photos/hot-chocolate.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>WH Login</title>
-    
+
 </head>
+
 <body>
     <header>
         <a href="index.html" class="webpage-logo">
@@ -27,15 +31,20 @@
         <nav>
             <input type="checkbox" id="sidebar-active">
             <label for="sidebar-active" class="open-sidebar-button">
-              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
             </label>
             <label id="overlay" for="sidebar-active"></label>
             <div class="links-container">
-              <label for="sidebar-active" class="close-sidebar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-              </label>
-        
-              <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </label>
+
+                <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
                 <a href="index.html">Home</a>
                 <a href="categories.html">Categories</a>
                 <a href="about us.html">About Us</a>
@@ -49,47 +58,69 @@
     <main class="supmain">
         <section id="signupForm">
             <form action="quizz.html" method="post">
-                <fieldset>
+                <fieldset class="personal-info">
                     <legend>Personal Info</legend>
                     <div class="grid-container">
-                        <div class="grid-item">
+                        <div class="grid-item-name">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your first name" required>
                         </div>
-                        <div class="grid-item">
+                        <div class="grid-item-surname">
                             <label for="surname">Surname</label>
                             <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
                         </div>
-                        <div class="grid-item">
+                        <div class="grid-item-homeAddress">
                             <label for="homeaddress">Home Address</label>
-                            <input type="text" id="homeaddress" name="homeaddress" placeholder="Enter your home address">
-                            <label for="homeaddressnumber">Home Address Number</label>
-                            <input type="number" id="homeaddressnumber" name="homeaddress" placeholder="Enter your home address number">
+                            <input type="text" id="homeaddress" name="homeaddress"
+                                placeholder="Enter your home address">
+                            <label for="homeaddressnumber">Number</label>
+                            <input type="number" id="homeaddressnumber" name="homeaddress"
+                                placeholder="Enter your home address number">
                         </div>
-                        <div class="grid-item">
+                        <div class="grid-item-dob">
                             <label for="bday">Date of Birth</label>
                             <input type="date" id="bday" name="bday" placeholder="Enter your birthday" required>
                         </div>
                     </div>
                 </fieldset>
-                   <fieldset>
-                        <legend>Contact Info</legend>
-                        <div class="grid-items"><label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="grid-items">
-                            <label for="phonenumber">Phone Number</label>
-                            <select id="country" name="country" required>
-                                <option value="">Select Country</option>
-                                <option value="+30">Greece (+30)</option>
-                                <option value="+1">USA (+1)</option>
-                                <option value="+44">UK (+44)</option>
-                                <option value="+91">India (+91)</option>
-                            </select>
-                            <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" required>
-                        </div>
-                    </fieldset>
-                <fieldset>
+                <fieldset class="contact-info">
+                    <legend>Contact Info</legend>
+                    <div class="grid-items"><label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="grid-items">
+                        <label for="phonenumber">Phone Number</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="+30">Greece (+30)</option>
+                            <option value="+1">USA (+1)</option>
+                            <option value="+44">UK (+44)</option>
+                            <option value="+91">India (+91)</option>
+                        </select>
+                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number"
+                            required>
+                    </div>
+                    <h3>Preferred Contact Method</h3>
+                    <div class="contact-check">
+                        <input type="checkbox" name="email-icon" id="email-icon">
+                        <label class="contact-group" for="email-icon">
+                            <img class="formimage" src="../Photos/email.png" alt="Error Loading Image">
+                        </label>
+                        <input type="checkbox" name="sms-icon" id="sms-icon">
+                        <label class="contact-group" for="sms-icon">
+                            <img class="formimage" src="../Photos/sms.png" alt="Error Loading Image">
+                        </label>
+                        <input type="checkbox" name="viber-icon" id="viber-icon">
+                        <label class="contact-group" for="viber-icon">
+                            <img class="formimage" src="../Photos/viber.png" alt="Error Loading Image">
+                        </label>
+                        <input type="checkbox" name="whatsapp-icon" id="whatsapp-icon">
+                        <label class="contact-group" for="whatsapp-icon">
+                            <img class="formimage" src="../Photos/whatsapp.png" alt="Error Loading Image">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="user-info">
                     <legend>User Info</legend>
                     <div class="grid-items"><label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter your Username">
@@ -100,58 +131,50 @@
                     <div class="grid-items"><label for="passwordCheck">Password</label>
                         <input type="password" id="passwordCheck" name="password" placeholder="Enter your Password">
                     </div>
-                    
-                </fieldset>
-                <fieldset class="contactcheck">
-                    <legend>Preferred Contact Method</legend>
-                    <div class="form-group">
-                        <img class="formimage" src="../Photos/email.png" alt="Error Loading Image">
-                        <input type="checkbox" name="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <img class="formimage" src="../Photos/sms.png" alt="Error Loading Image">
-                        <input type="checkbox" name="sms" id="sms">
-                    </div>
-                    <div class="form-group">
-                        <img class="formimage" src="../Photos/viber.png" alt="Error Loading Image">
-                        <input type="checkbox" name="viber" id="viber">
-                    </div>
-                    <div class="form-group">
-                        <img class="formimage" src="../Photos/whatsapp.png" alt="Error Loading Image">
-                        <input type="checkbox" name="whatsapp" id="whatsapp">
-                    </div>
+
                 </fieldset>
                 <button type="submit" id="submit-btn">Submit</button>
-                
+
             </form>
         </section>
 
         <p>Already have an account?<a href="login.html">Login here</a></p>
     </main>
-        
+
 
 
 
     <footer>
-        <div class="footer_contact_right" >
+        <div class="footer_contact_right">
             <p>Contact Nikos</p>
-            <a href="https://www.linkedin.com/in/nikolaos-vaitsis//" target="_blank"><img src="../Photos/linkedin.png" alt="Error Loading Photo"></a>
-            <a href="mailto:nikolasvaitsis@gmail.com" target="_blank"><img src="../Photos/email.png" alt="Error Loading Photo"></a>
-            <a href="https://wa.me/306971964072" target="_blank"><img src="../Photos/whatsapp.png" alt="Error Loading Photo"></a>
-            <a href="https://www.instagram.com/nikolas_vaitsis/" target="_blank"><img src="../Photos/instagram.png" alt="Error Loading Photo"></a>
-            <a href="https://www.facebook.com/nikolas.vaitsis" target="_blank"><img src="../Photos/facebook.png" alt="Error Loading Photo"></a>
+            <a href="https://www.linkedin.com/in/nikolaos-vaitsis//" target="_blank"><img src="../Photos/linkedin.png"
+                    alt="Error Loading Photo"></a>
+            <a href="mailto:nikolasvaitsis@gmail.com" target="_blank"><img src="../Photos/email.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://wa.me/306971964072" target="_blank"><img src="../Photos/whatsapp.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.instagram.com/nikolas_vaitsis/" target="_blank"><img src="../Photos/instagram.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.facebook.com/nikolas.vaitsis" target="_blank"><img src="../Photos/facebook.png"
+                    alt="Error Loading Photo"></a>
         </div>
-        
+
         <div class="footer_contact_left">
             <p>Contact Victor</p>
-            <a href="https://www.linkedin.com/in/georgios-viktor-kekas/" target="_blank"><img src="../Photos/linkedin.png" alt="Error Loading Photo"></a>
-            <a href="mailto:gvictor.kekas@gmail.com" target="_blank"><img src="../Photos/email.png" alt="Error Loading Photo"></a>
-            <a href="https://wa.me/306948920844" target="_blank"><img src="../Photos/whatsapp.png" alt="Error Loading Photo"></a>
-            <a href="https://www.instagram.com/victor_kekas/" target="_blank"><img src="../Photos/instagram.png" alt="Error Loading Photo"></a>
-            <a href="https://www.facebook.com/profile.php?id=100014815927157" target="_blank"><img src="../Photos/facebook.png" alt="Error Loading Photo"></a>
+            <a href="https://www.linkedin.com/in/georgios-viktor-kekas/" target="_blank"><img
+                    src="../Photos/linkedin.png" alt="Error Loading Photo"></a>
+            <a href="mailto:gvictor.kekas@gmail.com" target="_blank"><img src="../Photos/email.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://wa.me/306948920844" target="_blank"><img src="../Photos/whatsapp.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.instagram.com/victor_kekas/" target="_blank"><img src="../Photos/instagram.png"
+                    alt="Error Loading Photo"></a>
+            <a href="https://www.facebook.com/profile.php?id=100014815927157" target="_blank"><img
+                    src="../Photos/facebook.png" alt="Error Loading Photo"></a>
         </div>
-            
-        <p class="copyright"> &copyCOPYRIGHT 2024-2025</p> 
+
+        <p class="copyright"> &copyCOPYRIGHT 2024-2025</p>
     </footer>
 </body>
+
 </html>

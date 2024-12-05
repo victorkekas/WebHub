@@ -522,7 +522,270 @@ display: none;
 display: none;
 }
 
+/*signup.html && quizz.html && login.html*/
+/* Make the main a grid */
+.supmain {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr; /* Center column takes more space */
+    /* grid-template-rows: 1fr auto; Main form and additional text are stacked */
+}
+.supmain form{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+}
+.personal-info{
+    grid-column: 1/2;
+}
+.contact-info{
+    grid-column: 2/3;
+}
+.user-info{
+    grid-column: 3/4;
+}
+.supmain form button{
+    grid-column: span 3;
+}
 
+/* Place Form in correct place  and make the text good looking */
+#signupForm {
+    grid-column: 2 / 3; /* Place form in the center column */
+    grid-row: 1 / 2; /* Form is in the first row */
+    text-align: center;
+    align-items: center; /* Align items vertically in the grid */
+    justify-items: center; /* Center items horizontally */
+}
+fieldset{
+    border-style: dotted;
+    border-color: #603916;
+}
+/* Make the in objects to be aligned correctly  */
+.in {
+    display: flex;
+    flex-direction: column; 
+}
+/* Place p on wanted place */
+.supmain p {
+    grid-column: 2 / 3; 
+    grid-row: 2 / 3; 
+    text-align: center;
+}
+
+/* Make the grid position */
+.contact-check {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-group {
+    display: flex; /* Flexbox inside each contact group */
+    flex-direction: column; /* Stack image and checkbox vertically */
+    align-items: center; /* Center-align items */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+#email-icon, #sms-icon, #viber-icon, #whatsapp-icon{
+    display: none;
+}
+
+/* make them flex  */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.formimage {
+    height: auto;
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: all .35s ease
+}
+
+.formimage:hover {
+    filter: grayscale(0%); 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+}
+
+/*Centralize the children of the container*/
+.grid-container > *{
+    align-content: center;
+}
+.grid-item-name, .grid-item-homeAddress{
+    grid-column: 1/2;
+}
+.grid-item-surname, .grid-item-dob{
+    grid-column: 2/-1;
+}
+
+.grid-item label, .grid-item input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*quizz.html*/
+
+/* General Form Styling */
+form {
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff; /* White background for clean appearance */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fieldset Styling */
+fieldset {
+    margin-bottom: 1.5rem; /* Spacing between sections */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9; /* Light gray background for contrast */
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #603916; /* Darker color for contrast */
+}
+
+/* Form Questions */
+.form-question {
+    margin-bottom: 1.2rem;
+}
+
+.form-question label {
+    display: block; /* Ensure labels are on separate lines */
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #555; /* Slightly muted color for text */
+}
+
+.form-question input,
+.form-question select,
+textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-question input{
+    box-shadow: none;
+}
+
+textarea {
+    resize: none; /* Don't allow resizing by the user */
+    min-height: 6em;
+    width: 100%;
+    box-sizing: border-box;/* Includes padding and border in the width calculation */
+}
+
+/* Hover and Focus Effects */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none; /* Remove default outline */
+}
+
+button {
+    display: block;
+    width: auto;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #B1F0F7; /* Blue background */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #81BFDA; /* Darker blue on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+/*login.html*/
+.login-element{
+    text-align: center;
+}
+.login-main > p{
+    text-align: center;
+}
+
+
+/*quizz.html*/
+.quiz-main{
+    display: grid; 
+    grid-template-columns: 1fr 6fr 1fr;
+}
+.quiz-main h1{
+    grid-column: 1/-1;
+}
+.quiz-main form{
+    grid-column: 2/-2;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+}
+.quiz-main form button{
+    grid-column: 1/-1;
+}
+
+
+/*Between Desktop and Tablet*/
+@media only screen and (max-width: 1400px) {
+    /*signup.html*/
+    #signupform form {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .personal-info{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .contact-info{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .user-info{
+        grid-column: 2/-1;
+        grid-row: 2/3;
+    }
+    /*quizz.html*/
+    .quiz-main form{
+        grid-column: 2/-2;
+        grid-template-columns:  repeat(2, 1fr);
+    }
+    .education-background{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .learning-goals{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .learning-habits-and-resources{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
 /* CSS Styling for Tablet */
 @media only screen and (max-width: 960px) {
     /* Change body */
@@ -645,6 +908,58 @@ display: none;
     float :left;
     }
 
+    /*signup.html*/
+    
+    /*quizz.html*/
+    .quiz-main{
+        grid-template-columns: 1fr 1fr;
+    }
+    .quiz-main form{
+        grid-column: 1/-1;
+        /* display: grid; */
+        /* grid-template-columns:  repeat(2, 1fr); */
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    /*signup.html*/
+    .supmain form{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .personal-info {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    .contact-info {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+    .user-info {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+    .formimage{
+        max-width: 50%;
+    }
+    /*quizz.html*/
+    .quiz-main{
+        grid-template-columns: 1fr;
+    }
+    .quiz-main form{
+        grid-column: 1/-1;
+    }
+    .education-background{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .learning-goals{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+    .learning-habits-and-resources{
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
 }
 
 
@@ -873,169 +1188,7 @@ display: none;
     .course p{
         display: block;
     }
-}
-/* Make he main a grid */
-.supmain {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr; /* Center column takes more space */
-    grid-template-rows: 1fr auto; /* Main form and additional text are stacked */
-}
-
-/* Place Form in correct place  and make the text good looking */
-#signupForm {
-    grid-column: 2 / 3; /* Place form in the center column */
-    grid-row: 1 / 2; /* Form is in the first row */
-    text-align: center;
-    align-items: center; /* Align items vertically in the grid */
-    justify-items: center; /* Center items horizontally */
-}
-fieldset{
-    border-style: dotted;
-    border-color: #603916;
-}
-/* Make the in objects to be aligned correctly  */
-.in {
-    display: flex;
-    flex-direction: column; 
-}
-/* Place p on wanted place */
-.supmain p {
-    grid-column: 2 / 3; 
-    grid-row: 2 / 3; 
-    text-align: center;
-}
-
-/* Make the grid position */
-.contactcheck {
-    display: grid;
-     grid-template-columns: repeat(4, auto); /*repeat by 4 cause we have 4 means of contact  */
-}
-/* make them flex  */
-.contactcheck .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* make the images smaller */
-.contactcheck .formimage {
-    height: 3em;
-    width: min-content;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-}
-
-.grid-item {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: flex-start;  */
-}
-
-.grid-item label, .grid-item input {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/*quizz.html*/
-
-/* General Form Styling */
-form {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background-color: #ffffff; /* White background for clean appearance */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    font-family: 'Arial', sans-serif;
-}
-
-/* Fieldset Styling */
-fieldset {
-    margin-bottom: 1.5rem; /* Spacing between sections */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    background-color: #f9f9f9; /* Light gray background for contrast */
-}
-
-legend {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333; /* Darker color for contrast */
-}
-
-/* Form Questions */
-.form-question {
-    margin-bottom: 1.2rem;
-}
-
-.form-question label {
-    display: block; /* Ensure labels are on separate lines */
-    margin-bottom: 0.4rem;
-    font-weight: bold;
-    color: #555; /* Slightly muted color for text */
-}
-
-.form-question input,
-.form-question select,
-textarea {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.form-question input{
-    box-shadow: none;
-}
-
-textarea {
-    resize: none; /* Don't allow resizing by the user */
-    min-height: 6em;
-    width: 100%;
-    box-sizing: border-box;/* Includes padding and border in the width calculation */
-}
-
-/* Hover and Focus Effects */
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: #007bff; /* Blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none; /* Remove default outline */
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff; /* Blue background */
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    margin-top: 1rem;
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.02); /* Slight zoom on hover */
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    /*Forms*/
     form {
         padding: 1rem;
     }
@@ -1047,8 +1200,51 @@ button:focus {
     button {
         font-size: 0.9rem;
     }
-}
+    /*signup.html*/
+    .supmain form{
+        grid-template-columns: 1fr;
+    }
+    .personal-info {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    .contact-info {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+    .user-info {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+    /*Give some space between*/
+    .grid-container > *{
+        margin: 1em ;
+    }
+    .grid-item-homeAddress > *{
+        margin-bottom: 1em ;
+    }
+    .grid-items{
+        margin: 1em ;
+    }
+    .contact-info > .grid-items >#phonenumber{
+        margin-top: 1em;
+    }
 
+    .formimage{
+        max-width: 40%;
+    }
+
+    /*login.html*/
+    .login-element{
+        margin-bottom: 1.3em;
+    }
+
+    /*quizz.html*/
+    .quiz-main{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
 
 
 

@@ -46,14 +46,14 @@
                 <a href="index.html">Home</a>
                 <a href="categories.html">Categories</a>
                 <a href="about us.html">About Us</a>
-                <a href="login.html">Login - Logup</a>
+                <a href="login.html">Login - Signup</a>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="quiz-main">
         <h1>User Profile Questionnaire</h1>
         <form action="login.html" method="post">
-            <fieldset>
+            <fieldset class="education-background">
                 <legend>Education Background</legend>
                 <!-- Question 1 -->
                 <div class="form-question">
@@ -105,7 +105,7 @@
                         placeholder="E.g., Python, Data Analysis, Web Development"></textarea>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="learning-goals">
                 <legend>Learning Goals</legend>
                 <!-- Question 6 -->
                 <div class="form-question">
@@ -123,7 +123,7 @@
                     <label><input type="checkbox" name="improve" value="soft-skills"> Soft Skills</label>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="learning-habits-and-resources">
                 <legend>Learning Habits and Resources</legend>
                 <!-- Question 8 -->
                 <div class="form-question">
@@ -144,9 +144,9 @@
                     <label><input type="checkbox" name="learning-methods" value="visualizations"> Visualizations</label>
                     <label><input type="checkbox" name="learning-methods" value="auditory"> Auditory Learning</label>
                 </div>
-                <!-- Submit Button -->
-                <button type="submit">Submit Quiz</button>
             </fieldset>
+            <!-- Submit Button -->
+            <button type="submit">Submit Quiz</button>
         </form>
     </main>
 
