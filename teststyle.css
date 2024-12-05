@@ -1,117 +1,54 @@
-/* Base Styles */
+/* styles.css */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.main-header {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-}
-
-/* Logo Styling */
-.webpage-logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Title Styling */
-.title {
-    text-align: center;
-}
-
-.title h1 {
     margin: 0;
-    font-size: 1.8rem;
+    padding: 0;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-.title h2 {
-    margin: 0;
-    font-size: 1rem;
-    color: #777;
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
 }
 
-/* Hamburger Menu Styling */
-.hamburger {
+.palette-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 2;
+    gap: 20px;
 }
 
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    border-radius: 2px;
-    transition: 0.3s;
+.palette {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide checkbox */
-#menu-toggle {
-    display: none;
+.palette h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #555;
 }
 
-/* Navigation Menu */
-.nav-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.color {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-.nav-menu a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-.nav-menu a:hover {
-    background-color: #f4f4f4;
-}
-
-/* Show navigation when checkbox is checked */
-#menu-toggle:checked ~ .nav-menu {
-    display: block;
-}
-
-/*Method 1*/
-.scrollable-text {
-    max-width: 600px; 
-    max-height: 150px;
-    overflow-y: auto;
-    padding: 12px; /* Increased padding slightly for better spacing */
-    background-color: transparent; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners for smoother appearance */
-    line-height: 1.6;
-    margin: 1.3em auto; /* Center-align on the page */
-    box-shadow: 0 4px 6px rgb(247, 6, 6), 0 1px 3px rgba(0, 0, 0, 0.06); /* Soft shadow effect */
-    scrollbar-width: none; /* Hide scrollbar initially */
-}
-
-.scrollable-text p {
-    margin-bottom: 10px; 
-    text-align: justify; 
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow for text readability */
-}
-
-/* Add hover effect to highlight the container when interacted with */
-.scrollable-text:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+.color:nth-child(odd) {
+    color: #333; /* Make odd color blocks text darker for better contrast */
 }
