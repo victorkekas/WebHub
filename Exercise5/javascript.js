@@ -1,3 +1,34 @@
+document.addEventListener("DOMContentLoaded",init);
+
+function init(){
+    const form = document.getElementById("signupForm");
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const phoneNumberField = document.getElementById("phonenumber");
@@ -5,6 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordField = document.getElementById("password");
     const passwordCheckField = document.getElementById("passwordCheck");
     const homeAddressNumberField = document.getElementById("homeaddressnumber");
+    const homeAddressNumbersField = document.getElementById("homeaddressnumbers");
+    if(document.title === "WH SignUp"){
+        console.log("Yes")
+    }else{
+        console.log("No")
+    }
+
 
     form.addEventListener("submit", function (event) {
         let isValid = true;

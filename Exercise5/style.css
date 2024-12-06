@@ -561,8 +561,7 @@ display: none;
     grid-column: 2 / 3; /* Place form in the center column */
     grid-row: 1 / 2; /* Form is in the first row */
     text-align: center;
-    align-items: center; /* Align items vertically in the grid */
-    justify-items: center; /* Center items horizontally */
+    justify-items: center; /* Center items horizontally - submit button*/
 }
 fieldset{
     border-style: dotted;
