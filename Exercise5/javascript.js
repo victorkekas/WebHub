@@ -1,82 +1,81 @@
-document.addEventListener("DOMContentLoaded", init);
+// document.addEventListener("DOMContentLoaded", init);
 
-function init() {
-    const webpageTitle = document.title;
-    switch (webpageTitle) {
-        case "WH Quiz":
-            QuizPageInit();
-            break;
-        case "WH SignUp":
-            SignUpPageInit();
-            break;
-        default:
-            break;
-    }
-    const form = document.getElementById("signupForm");
-    //Get elements that you want to be validated in real-time
-    //If 'submit' call the validateForm function
+// function init() {
+//     const webpageTitle = document.title;
+//     switch (webpageTitle) {
+//         case "WH Quiz":
+//             QuizPageInit();
+//             break;
+//         case "WH SignUp":
+//             SignUpPageInit();
+//             break;
+//         default:
+//             break;
+//     }
+//     const form = document.getElementById("signupForm");
+//     //Get elements that you want to be validated in real-time
+//     //If 'submit' call the validateForm function
 
-}
-
-
-function SignUpPageInit(){
-    const form = document.getElementById("signupForm");
-    form.addEventListener("submit",SignUpPageSubmitValidate);
-}
-
-function QuizPageInit(){
-}
-/*Validation Functions for Signup form*/
-function SignUpPageSubmitValidate(event){
-    const name = document.getElementById("name");
-    const surname = document.getElementById("surname");
-    const homeaddress = document.getElementById("homeaddress");
-    const homeaddressnumber = document.getElementById("homeaddressnumber");
-    const dob = document.getElementById("dob");
-    const email = document.getElementById("email");
-    const country = document.getElementById("country");
-    const phonenumber = document.getElementById("phonenumber");
-    //Check every field. If one is invalid the whole form is invalid
-    let validForm = NameValidate() &&SurnameValidate()&&HomeAddressValidate()&&HomeAddressNumberValidate()&&
-                DoBValidate()&&EmailValidate()&&PhonenumberValidate()&&UsernameValidate()&&PasswordValidate();
-    //Do not submit if any field is invalid 
-    if (!validForm) {
-        event.preventDefault();
-    }
-}
-
-//The "text" element must be <document.getElementById()>
-function TextOnlyValidate(text){
-    // if input follows regex return true, otherwise false
-    return /^[a-zA-Z\s]*$/.test(text.value.trim());
-}
-function NameValidate(name){
-    if(!TextOnlyValidate(name)){
-        //Change colour
-    }else{
-        return true;
-    }
-}
-function SurnameValidate(){}
-function HomeAddressValidate(){}
-function HomeAddressNumberValidate(){}
-function DoBValidate(){}
-function EmailValidate(){}
-function PhonenumberValidate(){}
-function ContactMethodValidate(){}
-function UsernameValidate(){}
-function PasswordValidate(){}
+// }
 
 
+// function SignUpPageInit(){
+//     const form = document.getElementById("signupForm");
+//     form.addEventListener("submit",SignUpPageSubmitValidate);
+// }
 
-/*Validation Functions for Quiz form*/
-function QuizPageSubmitValidate(){}
-function ExtraCertificationsValidate(){}
-function TechnicalSkillsValidate(){}
+// function QuizPageInit(){
+// }
+// /*Validation Functions for Signup form*/
+// function SignUpPageSubmitValidate(event){
+//     const name = document.getElementById("name");
+//     const surname = document.getElementById("surname");
+//     const homeaddress = document.getElementById("homeaddress");
+//     const homeaddressnumber = document.getElementById("homeaddressnumber");
+//     const dob = document.getElementById("dob");
+//     const email = document.getElementById("email");
+//     const country = document.getElementById("country");
+//     const phonenumber = document.getElementById("phonenumber");
+//     //Check every field. If one is invalid the whole form is invalid
+//     let validForm = NameValidate() &&SurnameValidate()&&HomeAddressValidate()&&HomeAddressNumberValidate()&&
+//                 DoBValidate()&&EmailValidate()&&PhonenumberValidate()&&UsernameValidate()&&PasswordValidate();
+//     //Do not submit if any field is invalid 
+//     if (!validForm) {
+//         event.preventDefault();
+//     }
+// }
+
+// //The "text" element must be <document.getElementById()>
+// function TextOnlyValidate(text){
+//     // if input follows regex return true, otherwise false
+//     return /^[a-zA-Z\s]*$/.test(text.value.trim());
+// }
+// function NameValidate(name){
+//     if(!TextOnlyValidate(name)){
+//         //Change colour
+//     }else{
+//         return true;
+//     }
+// }
+// function SurnameValidate(){}
+// function HomeAddressValidate(){}
+// function HomeAddressNumberValidate(){}
+// function DoBValidate(){}
+// function EmailValidate(){}
+// function PhonenumberValidate(){}
+// function ContactMethodValidate(){}
+// function UsernameValidate(){}
+// function PasswordValidate(){}
 
 
-function Validate(){}
 
+// /*Validation Functions for Quiz form*/
+// function QuizPageSubmitValidate(){}
+// function ExtraCertificationsValidate(){}
+// function TechnicalSkillsValidate(){}
+
+
+// function Validate(){}
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
@@ -114,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Validate Date of Birth (14 <= age <= 130)
-        const bdayInput = document.getElementById("bday");
+        const bdayInput = document.getElementById("dob");
         const today = new Date();
         const bday = new Date(bdayInput.value);
         const age = today.getFullYear() - bday.getFullYear();
