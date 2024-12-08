@@ -63,11 +63,11 @@
                     <legend>Personal Info</legend>
                     <div class="grid-container">
                         <div class="grid-item-name">
-                            <label for="name">Name</label>
+                            <label for="name"><p class="star">*</p>Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your first name" required>
                         </div>
                         <div class="grid-item-surname">
-                            <label for="surname">Surname</label>
+                            <label for="surname"><p class="star">*</p>Surname</label>
                             <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
                         </div>
                         <div class="grid-item-homeAddress">
@@ -79,29 +79,29 @@
                                 placeholder="Enter your home address number">
                         </div>
                         <div class="grid-item-dob">
-                            <label for="dob">Date of Birth</label>
+                            <label for="dob"><p class="star">*</p>Date of Birth</label>
                             <input type="date" id="dob" name="dob" placeholder="Enter your birthday" required>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset class="contact-info">
                     <legend>Contact Info</legend>
-                    <div class="grid-items"><label for="email">E-mail</label>
+                    <div class="grid-items"><label for="email"><p class="star">*</p>E-mail</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="grid-items">
-                        <label for="phonenumber">Phone Number</label>
+                        <label for="phonenumber"><p class="star">*</p>Phone Number</label>
                         <select id="country" name="country" required>
                             <option value="">Select Country</option>
-                            <option value="+30">Greece (+30)</option>
-                            <option value="+1">USA (+1)</option>
-                            <option value="+44">UK (+44)</option>
-                            <option value="+91">India (+91)</option>
+                            <option value="Greece">Greece (+30)</option>
+                            <option value="USA">USA (+1)</option>
+                            <option value="UK">UK (+44)</option>
+                            <option value="India">India (+91)</option>
                         </select>
                         <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number"
                             required>
                     </div>
-                    <h3>Preferred Contact Method</h3>
+                    <h3><p class="star">*</p>Preferred Contact Method</h3>
                     <div class="contact-check">
                         <input type="checkbox" name="email-icon" id="email-icon">
                         <label class="contact-group" for="email-icon">
@@ -123,14 +123,14 @@
                 </fieldset>
                 <fieldset class="user-info">
                     <legend>User Info</legend>
-                    <div class="grid-items"><label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your Username">
+                    <div class="grid-items"><label for="username"><p class="star">*</p>Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your Username" required>
                     </div>
-                    <div class="grid-items"><label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your Password">
+                    <div class="grid-items"><label for="password"><p class="star">*</p>Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your Password" >
                     </div>
-                    <div class="grid-items"><label for="passwordCheck">Password</label>
-                        <input type="password" id="passwordCheck" name="password" placeholder="Enter your Password">
+                    <div class="grid-items"><label for="passwordCheck"><p class="star">*</p>Confirm Password</label>
+                        <input type="password" id="passwordCheck" name="password" placeholder="Enter your Password" >
                     </div>
 
                 </fieldset>

@@ -578,6 +578,12 @@ fieldset{
     grid-row: 2 / 3; 
     text-align: center;
 }
+/*Star for mandatory input. Small and transparent.*/
+.star{
+    margin: 0;
+    display: inline;
+    font-size: small;
+}
 
 /* Make the grid position */
 .contact-check {

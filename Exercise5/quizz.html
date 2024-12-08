@@ -59,7 +59,7 @@
                 <legend>Education Background</legend>
                 <!-- Question 1 -->
                 <div class="form-question">
-                    <label for="education">1. What is your highest level of education?</label>
+                    <label for="education"><p class="star">*</p>1. What is your highest level of education?</label>
                     <select id="education" name="education" required>
                         <option value="">-- Select --</option>
                         <option value="highschool">High School</option>
@@ -72,8 +72,8 @@
 
                 <!-- Question 2 -->
                 <div class="form-question">
-                    <label for="field">2. Which field of study best describes your background?</label>
-                    <select id="field" name="field" required>
+                    <label for="studyField"><p class="star">*</p>2. Which field of study best describes your background?</label>
+                    <select id="studyField" name="studyField" required>
                         <option value="">-- Select --</option>
                         <option value="cs">Computer Science</option>
                         <option value="engineering">Engineering</option>
@@ -84,7 +84,7 @@
                 </div>
                 <!-- Question 3 -->
                 <div class="form-question">
-                    <label for="certifications">3. Did you participate in any additional certifications or training
+                    <label for="certifications"><p class="star">*</p>3. Did you participate in any additional certifications or training
                         programs?</label>
                     <label><input type="checkbox" name="certifications" value="online-courses"> Online Courses</label>
                     <label><input type="checkbox" name="certifications" value="bootcamps"> Bootcamps</label>
@@ -92,17 +92,17 @@
                     <label><input type="checkbox" name="certifications" value="none"> None</label>
                     <!-- Text Area for Additional Details -->
                     <textarea id="certification-details" name="certification-details"
-                        placeholder="Describe your certifications here..." maxlength="200"></textarea>
+                        placeholder="Describe your certifications here..." maxlength="200" disabled></textarea>
                 </div>
                 <!-- Question 4 -->
                 <div class="form-question">
-                    <p>4. Have you studied or taken courses in a language other than your native language?</p>
+                    <p><p class="star">*</p>4. Have you studied or taken courses in a language other than your native language?</p>
                     <label><input type="radio" name="language-courses" value="yes" required> Yes</label><br>
                     <label><input type="radio" name="language-courses" value="no" required> No</label>
                 </div>
                 <!-- Question 5 -->
                 <div class="form-question">
-                    <label for="skills">5. Which technical skills do you currently possess?</label>
+                    <label for="skills"><p class="star">*</p>5. Which technical skills do you currently possess?</label>
                     <textarea id="skills" name="skills"
                         placeholder="E.g., Python, Data Analysis, Web Development"></textarea>
                 </div>
@@ -111,14 +111,14 @@
                 <legend>Learning Goals</legend>
                 <!-- Question 6 -->
                 <div class="form-question">
-                    <p>6. What is your primary motivation for learning?</p>
+                    <label><p class="star">*</p>6. What is your primary motivation for learning?</label>
                     <label><input type="radio" name="motivation" value="career" required> Career Advancement</label>
                     <label><input type="radio" name="motivation" value="skills" required> Gaining New Skills</label>
                     <label><input type="radio" name="motivation" value="interest" required> Personal Interest</label>
                 </div>
                 <!-- Question 7 -->
                 <div class="form-question">
-                    <p>7. Which areas would you like to improve?</p>
+                    <label><p class="star">*</p>7. Which areas would you like to improve?</label>
                     <label><input type="checkbox" name="improve" value="coding"> Coding</label>
                     <label><input type="checkbox" name="improve" value="data-analysis"> Data Analysis</label>
                     <label><input type="checkbox" name="improve" value="machine-learning"> Machine Learning</label>
@@ -129,7 +129,7 @@
                 <legend>Learning Habits and Resources</legend>
                 <!-- Question 8 -->
                 <div class="form-question">
-                    <label for="time">8. How much time can you dedicate weekly to learning?</label>
+                    <label for="time"><p class="star">*</p>8. How much time can you dedicate weekly to learning?</label>
                     <select id="time" name="time" required>
                         <option value="">-- Select --</option>
                         <option value="1-2">1-2 hours</option>
@@ -140,7 +140,7 @@
                 </div>
                 <!-- Question 9 -->
                 <div class="form-question">
-                    <label for="learning-methods">9. Which learning methods do you prefer?</label>
+                    <label for="learning-methods"><p class="star">*</p>9. Which learning methods do you prefer?</label>
                     <label><input type="checkbox" name="learning-methods" value="reading"> Reading</label>
                     <label><input type="checkbox" name="learning-methods" value="writing"> Writing (Exercises)</label>
                     <label><input type="checkbox" name="learning-methods" value="visualizations"> Visualizations</label>
