@@ -449,6 +449,11 @@ nav {
 main {
   grid-area: m;
 }
+/*The links inside the texts must blend-in naturally*/
+main a {
+  margin: 0em;
+  padding: 0em;
+}
 
 .index {
   display: grid;
@@ -1309,12 +1314,6 @@ button:focus {
 
   .makesmaller {
     margin: 0em;
-  }
-
-  /*The links inside the texts must blend-in naturally*/
-  main a {
-    margin: 0em;
-    padding: 0em;
   }
 
   /*categories.html*/

@@ -914,6 +914,7 @@ main {
     /*  Used in:    python.html 
       Purpose:    Create a box where a lagre text can be put inside and scroll to read it.(see to understand)*/
     .scrollable-text {
+        display: inline-block;
         max-width: 600px;
         max-height: 200px;
         overflow-y: auto;
