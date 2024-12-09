@@ -626,11 +626,17 @@ fieldset{
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
 }
-
+/* .form-questions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+} */
 /*Centralize the children of the container*/
 .grid-container > *{
     align-content: center;
 }
+/* .form-questions-container > *{
+    align-content: center;
+} */
 .grid-item-name, .grid-item-homeAddress{
     grid-column: 1/2;
 }
@@ -642,7 +648,18 @@ fieldset{
     width: 100%;
     box-sizing: border-box;
 }
+/* 
+.form-question.name, .form-question.homeAddress{
+    grid-column: 1/2;
+}
+.form-question.surname, .form-question.dob{
+    grid-column: 2/-1;
+}
 
+.form-question label, .form-question input {
+    max-width: 100%;
+    box-sizing: border-box;
+} */
 /*quizz.html*/
 
 /* General Form Styling */
@@ -696,6 +713,21 @@ textarea {
 }
 .form-question input{
     box-shadow: none;
+}
+
+/*Change input border for error*/
+.form-question.error input, .form-question.error textarea{
+    border-color: #ff3860;
+}
+/*Change input border for success*/
+.form-question.success input, .form-question.success textarea{
+    border-color: #09c372;
+}
+/*Make error message red*/
+.form-question .error{
+    color: #ff3860;
+    font-size: 0.8em;
+    /* height: 13px; */
 }
 
 textarea {
@@ -1232,7 +1264,7 @@ button:focus {
         grid-row: 3 / 4;
     }
     /*Give some space between*/
-    .grid-container > *{
+    .form-questions-container > *{
         margin: 1em ;
     }
     .grid-item-homeAddress > *{

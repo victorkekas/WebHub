@@ -329,6 +329,11 @@ function TechnicalSkillsValidate(skills) {
     if (skills.value.trim().length < 30 || /[{}\[\];]/.test(skills.value.trim())) {
         isValid = false;
     }
+    if(!isValid){
+        setError(skills,"You must write a small paragraph.");
+    }else{
+        setSuccess(skills);
+    }
     console.log("skills "+isValid);
     return isValid;
  }
@@ -365,3 +370,23 @@ function LearningMethodsCheckboxesValidate(learningMethodsCheckboxes){
     console.log("learningMethodsCheckboxes "+isValid);
     return isValid;
 }
+
+//Display an error message when input is wrong
+const setError = (element, message) => {
+    const formQuestion = element.parentElement;
+    const errorDisplay = formQuestion.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    formQuestion.classList.add('error');
+    formQuestion.classList.remove('success')
+}
+
+//Display an success message when input is right
+const setSuccess = element => {
+    const formQuestion = element.parentElement;
+    const errorDisplay = formQuestion.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    formQuestion.classList.add('success');
+    formQuestion.classList.remove('error');
+};
