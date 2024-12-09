@@ -1,17 +1,19 @@
+/* Adjust image size */
 .prof_pic{
     height: 250px;
 }
+/* Adhust image size and placement */
 .book_image , .video_image {
     height: 300px;
     float: inline-start;
     display: inline-flex;
 }
-
+/* Adjust footer images */
 footer img{
     margin:0%;
     height: 25px;
 }
-
+/* nav bar adjusrtment  */
 nav{
     text-align: center;
     font-size: 1.5em;
@@ -21,33 +23,42 @@ header>a{
     margin: 0%;
     position: absolute;
 }
+
+/* place paragraphs on wanted spot  */
 article .stars,article .reviews,article .authors, article .instructor{
     float: right    ;
 }
+/* change wieght (bold) */
 article .reviews,article .stars{
     font-weight: 800;
 }
+/* make them italic */
 article .authors, article .instructor{
     font-style: italic;
 }
+/* change h1 size */
 h1{
     font-size: 2.1em;
 }
-
+/* place in center */
 .copyright {
     text-align: center;
 }
+
+/* make them a block and make them center */
 .footer_contact_left,.footer_contact_right,.copyright{
     display: block;
     text-align: center; 
 }
 
+/* placement of footer */
 .footer_contact_right{
 
     justify-content: flex-end;
     float: inline-end;
 }
 
+/* placement of footer */
 .footer_contact_left{
 
     justify-content: flex-start;
@@ -67,14 +78,14 @@ body,header,footer,main{
     background-color: #FEFAE0;
 }
 /* Main tags and pseudo-classes*/
-body{}
+
 
 header>img{
     position: absolute;
     display: flex;
     justify-content:space-between;
 }
-
+/* change all headers  */
 h1,h2,h3,h4,h5{
     text-align:center;
     color: #603916;
@@ -108,29 +119,11 @@ a:active{
     color: #283618;
 }
 
-main{}
-section{}
-article{}
-
-
 /* The text of each paragraph, goes from one end to the other. */
 p{
     text-align: justify;
 }
-ul{}
-ol{}
-li{}
-strong{}
-footer{}
-picture{}
-img{}
-source{}
-figure{}
-figcaption{}
 
-/* Classes and IDs*/
-.footer_contact_right{}
-.footer_contact_left{}
 
 /* Setup for the layout */
 .person_left, .person_right {
@@ -152,23 +145,24 @@ figcaption{}
     font-weight: bold;
     font-style: italic;
 }
+/* make the intro text smaller  */
 .makesmaller{
     margin-left: 7em;
     margin-right: 7em;
     
 }
+/* change the wh logo size  */
 .topimage{
     height: 5em;
 }
+/* place in center */
 .nav_categories{
-    /* background-color: #283618; */
+    
     justify-content: center;
 }
 
-/*  */
+/* adjust categorie  */
 .category {
-    /* background-color: #603916;
-    border: 2px solid black; */
     padding: 1em;
     width: 90em;
     margin: auto;
@@ -195,7 +189,6 @@ figcaption{}
     display: block;
     margin: auto;
     width: 23em;
-    /* width: auto; */
 }
 
 .category_links{
@@ -212,24 +205,15 @@ figcaption{}
     margin-top: 1em;
 }
 
-
+/* make it nice   */
 .copyright{
     text-align: center;
     font-weight: 300;
 }
+/* remove tghe dots  */
 article ul>li {
 list-style-type:none ;
 }
-
-/* .lecture{
-    background-color: aqua;
-    display: block;
-    clear: both;
-} */
-
-
-
-.description{}
 
 /*  Used in:    Pythin_mit_lectures.html & nn_and_dl.html 
     Purpose:    Centralize the content*/
