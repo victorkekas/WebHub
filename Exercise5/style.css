@@ -3,25 +3,29 @@
   height: 250px;
   max-width: 100%;
 }
+
 .video_image {
   height: 15em;
   float: inline-start;
   display: inline-flex;
   max-width: 100%;
 }
+
 footer img {
   margin: 0%;
   height: 25px;
 }
+
 /* place nav on center */
 nav {
   text-align: center;
   font-size: 1.5em;
 }
 
-header > a {
+header>a {
   margin: 0%;
 }
+
 /* place stats on right */
 article .stars,
 article .reviews,
@@ -29,19 +33,23 @@ article .authors,
 article .instructor {
   float: right;
 }
+
 /* bold */
 article .reviews,
 article .stars {
   font-weight: 800;
 }
+
 /* italics */
 article .authors,
 article .instructor {
   font-style: italic;
 }
+
 h1 {
   font-size: 2.1em;
 }
+
 /* copyright in center  */
 .copyright {
   text-align: center;
@@ -73,12 +81,14 @@ h1 {
   font-size: 1em;
   color: #283618;
 }
+
 body,
 header,
 footer,
 main {
   background-color: #fefae0;
 }
+
 /* Main tags and pseudo-classes*/
 /* make the pages 3x3  */
 body {
@@ -89,6 +99,7 @@ body {
     "f f f";
   grid-template-columns: 1fr, 1fr, 1fr;
 }
+
 /* header styling  */
 h1,
 h2,
@@ -97,13 +108,15 @@ h4,
 h5 {
   text-align: center;
   color: #603916;
-  margin-bottom: 0.3em; /*To be a little free*/
+  margin-bottom: 0.3em;
+  /*To be a little free*/
 }
 
 /* Enlarge the text when hover */
 nav a:hover {
   transform: scale(1.1);
 }
+
 /* Link decoration */
 a {
   text-decoration: none;
@@ -113,10 +126,12 @@ a {
   padding: 0.5em;
   margin: 0.7em;
 }
+
 /* Link hover decoration */
 a:hover {
   color: #603916;
 }
+
 /* Link on click decoration */
 a:active {
   color: #283618;
@@ -128,7 +143,8 @@ p {
 }
 
 img {
-  max-width: 100%; /* take up as much width as it can */
+  max-width: 100%;
+  /* take up as much width as it can */
 }
 
 /* Setup for the layout */
@@ -151,13 +167,16 @@ img {
   font-weight: bold;
   font-style: italic;
 }
+
 .makesmaller {
   margin-left: 7em;
   margin-right: 7em;
 }
+
 .topimage {
   height: 5em;
 }
+
 .nav_categories {
   justify-content: center;
 }
@@ -190,6 +209,7 @@ img {
   display: block;
   max-width: 100%;
 }
+
 /* removes bullet points from list items */
 .category_links {
   list-style-type: none;
@@ -217,7 +237,7 @@ img {
 }
 
 /* removes bullet points from list items */
-article ul > li {
+article ul>li {
   list-style-type: none;
 }
 
@@ -242,11 +262,13 @@ article ul > li {
   margin-right: 10em;
   margin-bottom: 5em;
 }
-.course-description picture > img,
-.course-description picture > source {
+
+.course-description picture>img,
+.course-description picture>source {
   float: left;
   max-width: 35em;
 }
+
 .course-description p {
   margin: 0em;
   text-align: justify;
@@ -277,10 +299,12 @@ article ul > li {
   clear: both;
   max-width: 100%;
 }
+
 .course h3 {
   display: block;
   block-size: 2em;
 }
+
 /* removes bullet points from list items */
 /* videos */
 .course iframe {
@@ -290,6 +314,7 @@ article ul > li {
   max-width: 100%;
   height: auto;
 }
+
 .course p {
   text-align: justify;
   max-width: 100%;
@@ -307,7 +332,8 @@ article ul > li {
 }
 
 .course .chapter-photo figure img {
-  max-width: 100%; /* take up as much width as it can */
+  max-width: 100%;
+  /* take up as much width as it can */
   height: auto;
   display: block;
 }
@@ -315,7 +341,8 @@ article ul > li {
 .course .chapter-photo figure figcaption {
   max-width: 100%;
   margin-top: 10px;
-  word-wrap: break-word; /* Wraps long words */
+  word-wrap: break-word;
+  /* Wraps long words */
 }
 
 .course picture img,
@@ -325,7 +352,8 @@ article ul > li {
 
 .course-subinformations {
   display: block;
-  clear: both; /* removes floats */
+  clear: both;
+  /* removes floats */
 }
 
 .course-subinformations ul {
@@ -342,10 +370,12 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
+
 footer p {
   grid-area: f;
   text-align: center;
 }
+
 .footer_contact_left {
   grid-area: f;
   grid-column: 1/2;
@@ -374,6 +404,7 @@ header {
   justify-items: center;
   align-items: center;
 }
+
 /* place header logo  */
 header .webpage-logo {
   grid-column: 1 / 2;
@@ -383,6 +414,7 @@ header .webpage-logo {
   align-items: center;
   max-width: 50%;
 }
+
 /* place header title */
 header .title {
   grid-column: 2 / 3;
@@ -390,6 +422,7 @@ header .title {
   text-align: center;
   align-self: center;
 }
+
 /* place nav bar on secind row */
 nav {
   grid-column: 2 / 3;
@@ -407,10 +440,12 @@ nav {
   justify-content: space-around;
   text-align: center;
 }
+
 /*The links in nav spilt in rows without breaking in half*/
-.navigation-links-container > a {
+.navigation-links-container>a {
   margin: 0em;
 }
+
 main {
   grid-area: m;
 }
@@ -497,6 +532,7 @@ main {
 #sidebar-active {
   display: none;
 }
+
 /* Hide the svg images from the pages */
 .open-sidebar-button,
 .close-sidebar-button {
@@ -509,21 +545,26 @@ main {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
 }
+
 /* signupform main make it repeat 3 times*/
 /* Place the input forms in wanted spot */
 .supmain form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .personal-info {
   grid-column: 1/2;
 }
+
 .contact-info {
   grid-column: 2/3;
 }
+
 .user-info {
   grid-column: 3/4;
 }
+
 .supmain form button {
   grid-column: span 3;
 }
@@ -534,22 +575,26 @@ main {
   grid-row: 1 / 2;
   text-align: center;
 }
+
 /* make utline ditted */
 fieldset {
   border-style: dotted;
   border-color: #603916;
 }
+
 /* Make the in objects to be aligned correctly  */
 .in {
   display: flex;
   flex-direction: column;
 }
+
 /* Place p on wanted place */
 .supmain p {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   text-align: center;
 }
+
 /*Star for mandatory input. Small and transparent.*/
 .star {
   margin: 0;
@@ -567,12 +612,14 @@ fieldset {
   justify-content: space-between;
   align-items: center;
 }
+
 .contact-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
+
 #email-icon,
 #sms-icon,
 #viber-icon,
@@ -600,12 +647,15 @@ fieldset {
 
 .signup-question-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-template-columns: 1fr 1fr;
+  /* 2 columns */
 }
+
 /*Centralize the children of the container*/
-.signup-question-container > * {
+.signup-question-container>* {
   align-content: center;
 }
+
 /* place the input tags for quiz in correct spot  */
 .signup-question.name,
 .signup-question.homeAddress,
@@ -613,21 +663,26 @@ fieldset {
   grid-column: 1/2;
   grid-row: 1/2;
 }
+
 .signup-question.homeAddress {
   grid-row: 2/3;
 }
+
 .signup-question.homeAddressNumber {
   grid-row: 3/4;
 }
+
 .signup-question.surname,
 .signup-question.dob,
 .signup-question.gender {
   grid-column: 2/-1;
   grid-row: 1/2;
 }
+
 .signup-question.dob {
   grid-row: 2/3;
 }
+
 .signup-question.gender {
   grid-row: 3/4;
 }
@@ -637,10 +692,12 @@ fieldset {
   width: 100%;
   box-sizing: border-box;
 }
+
 .signup-question input {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+
 /*Change input border for error in signup*/
 .signup-question.error input {
   border-color: #ff3860;
@@ -650,6 +707,7 @@ fieldset {
 .signup-question.success input {
   border-color: #09c372;
 }
+
 /*Make error message red in signup*/
 .signup-question .error {
   color: #ff3860;
@@ -667,7 +725,8 @@ form {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: "Arial", sans-serif; /* change the goon in forms  */
+  font-family: "Arial", sans-serif;
+  /* change the goon in forms  */
 }
 
 /* Fieldset Styling */
@@ -683,7 +742,8 @@ legend {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #603916; /* Darker color  */
+  color: #603916;
+  /* Darker color  */
 }
 
 /* Form Questions */
@@ -695,7 +755,8 @@ legend {
   display: block;
   margin-bottom: 0.4rem;
   font-weight: bold;
-  color: #555; /*50 shades of grey */
+  color: #555;
+  /*50 shades of grey */
 }
 
 .form-question input,
@@ -708,6 +769,7 @@ textarea {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 .form-question input {
   box-shadow: none;
 }
@@ -717,11 +779,13 @@ textarea {
 .form-question.error textarea {
   border-color: #ff3860;
 }
+
 /*Change input border for success in quiz*/
 .form-question.success input,
 .form-question.success textarea {
   border-color: #09c372;
 }
+
 /*Make error message red in quiz*/
 .form-question .error {
   color: #ff3860;
@@ -739,9 +803,11 @@ textarea {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #007bff; /* change border on focus */
+  border-color: #007bff;
+  /* change border on focus */
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none; /* Remove outline */
+  outline: none;
+  /* Remove outline */
 }
 
 button {
@@ -751,8 +817,10 @@ button {
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #b1f0f7; /* Blue background  */
-  border: none; /*  no border */
+  background-color: #b1f0f7;
+  /* Blue background  */
+  border: none;
+  /*  no border */
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
@@ -760,19 +828,23 @@ button {
 }
 
 button:hover {
-  background-color: #81bfda; /* darker on hover */
-  transform: scale(1.02); /*  zoom on hover */
+  background-color: #81bfda;
+  /* darker on hover */
+  transform: scale(1.02);
+  /*  zoom on hover */
 }
 
 button:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
 /*login.html*/
 .login-element {
   text-align: center;
 }
-.login-main > p {
+
+.login-main>p {
   text-align: center;
 }
 
@@ -782,43 +854,52 @@ button:focus {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
 }
+
 .quiz-main h1 {
   grid-column: 1/-1;
 }
+
 .quiz-main form {
   grid-column: 2/-2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .quiz-main form button {
   grid-column: 1/-1;
 }
 
 /*Between Desktop and Tablet*/
 @media only screen and (max-width: 1400px) {
+
   /*signup.html*/
   /*Make the sign up form have 2 columns*/
   #signupform form {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /*Place the fieldsets in the right columns and rows*/
   .personal-info {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
+
   .contact-info {
     grid-column: 1/2;
     grid-row: 2/3;
   }
+
   .user-info {
     grid-column: 2/-1;
     grid-row: 2/3;
   }
+
   /*Make the images take up move space by reducing the margin and padding of their container*/
   .contact-group {
     margin: 0.2em;
     padding: 0.2em;
   }
+
   /*quizz.html*/
   /*Make the quiz form have 2 columns
     and centralize it*/
@@ -826,22 +907,27 @@ button:focus {
     grid-column: 2/-2;
     grid-template-columns: repeat(2, 1fr);
   }
+
   /*Place the fieldsets in the proper columns and rows*/
   .education-background {
     grid-column: 1/2;
     grid-row: 1/3;
   }
+
   .learning-goals {
     grid-column: 2/3;
     grid-row: 1/2;
   }
+
   .learning-habits-and-resources {
     grid-column: 2/3;
     grid-row: 2/3;
   }
 }
+
 /* CSS Styling for Tablet */
 @media only screen and (max-width: 960px) {
+
   /* Change body */
   body {
     display: grid;
@@ -856,6 +942,7 @@ button:focus {
   header {
     grid-template-columns: 1fr 3fr;
   }
+
   /* Place title in corent place */
   header .title {
     grid-column: 2 / 5;
@@ -865,12 +952,14 @@ button:focus {
   h1 {
     font-size: 1.7em;
   }
+
   /* Make nav smaller */
   h2 {
     font-size: 1.2em;
   }
+
   /* Place nav in corent spot and make it smaller  */
-  header > nav {
+  header>nav {
     grid-column: 2 / 5;
     font-size: 1.3em;
   }
@@ -879,10 +968,12 @@ button:focus {
   footer {
     grid-template-columns: 1fr 1fr;
   }
+
   /* Place contact info correctly   */
   .footer_contact_right {
     grid-column: 2/3;
   }
+
   /* Place copyright correctly  */
   footer .copyright {
     grid-column: 1/3;
@@ -893,30 +984,36 @@ button:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   /* Place Lune in center in second line */
   .person_left_luna {
     grid-column: 1/3;
     grid-row: 2/3;
   }
+
   /* Make the description go to center  */
   .person_left_luna p {
     text-align: center;
   }
+
   /* Fix person position  */
   .person_right {
     grid-column: 1/2;
     grid-row: 1/2;
   }
+
   /* Fix person position  */
   .person_left {
     grid-column: 2/3;
     grid-row: 1/2;
   }
+
   /*Make the body>main of the categories.html page two columns wide*/
   .nav_categories {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   /*Make the books and lectures display in two columns*/
   #books ul,
   #lectures ul {
@@ -930,6 +1027,7 @@ button:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   /*Picture gets smaller while shrinking the window, and it is centralised.*/
   #pythonvideoimage {
     max-width: 100%;
@@ -939,28 +1037,33 @@ button:focus {
     justify-content: center;
     align-items: center;
   }
+
   /*Make the courses take the whole width of the parent, and have 2 courses at each row.*/
   .courses-container {
     margin: 0%;
     grid-column: 1/3;
     grid-template-columns: repeat(2, 1fr);
   }
+
   /*Make the Image and text be in the first column*/
   .course-description {
     grid-column: 1/2;
     margin: 0.5em;
   }
+
   /*Make the table of content be in the second column*/
   .tables-of-content {
     grid-column: 2/3;
   }
+
   /*  Used in:    nn_and_dl.html 
       Purpose:    Make the image float left*/
   #nnimage {
     float: left;
   }
+
   /*  Used in:    nn_and_dl.html 
-      Purpose:    Make the paragraph (description of the book) float left, so the sub-informations can go up next to the iamge.*/  
+      Purpose:    Make the paragraph (description of the book) float left, so the sub-informations can go up next to the iamge.*/
   .nnMain .description {
     float: left;
   }
@@ -973,12 +1076,14 @@ button:focus {
   .quiz-main {
     grid-template-columns: 1fr 1fr;
   }
+
   .quiz-main form {
     grid-column: 1/-1;
   }
 }
 
 @media only screen and (max-width: 750px) {
+
   /*signup.html*/
   /*  Used in:    signup.html 
       Purpose:    Make the form have 2 columns for readability reasons,
@@ -986,21 +1091,26 @@ button:focus {
   .supmain form {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .personal-info {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
+
   .contact-info {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
+
   .user-info {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
   }
+
   .formimage {
     max-width: 50%;
   }
+
   /*quizz.html*/
   /*  Used in:    quizz.html 
       Purpose:    Make the form have 1 column for readability reasons,
@@ -1008,17 +1118,21 @@ button:focus {
   .quiz-main {
     grid-template-columns: 1fr;
   }
+
   .quiz-main form {
     grid-column: 1/-1;
   }
+
   .education-background {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
+
   .learning-goals {
     grid-column: 1/-1;
     grid-row: 2/3;
   }
+
   .learning-habits-and-resources {
     grid-column: 1/-1;
     grid-row: 3/4;
@@ -1027,15 +1141,18 @@ button:focus {
 
 /* CSS Styling for Mobile */
 @media only screen and (max-width: 620px) {
+
   /*Decrease margin and padding for better visualisation*/
   * {
     margin: 0.05em;
     padding: 0.03em;
   }
+
   p {
     margin-left: 1em;
     margin-right: 1em;
   }
+
   body {
     display: grid;
     grid:
@@ -1050,23 +1167,27 @@ button:focus {
     grid-template-columns: 1fr 3fr 1fr;
     position: relative;
   }
+
   /*Re-arrange the placement of the items to fit the mobile window*/
   /*Top-left corner*/
   header .webpage-logo {
     grid-column: 1/2;
     grid-row: 1/2;
   }
+
   /*Increase the size of the image to be visible */
   .topimage {
     max-width: 200%;
   }
+
   /*Place title in top-middle*/
   header .title {
     grid-column: 2/5;
     grid-row: 1/2;
   }
+
   /*Place nav in top-right corner*/
-  header > nav {
+  header>nav {
     grid-column: 5/6;
     grid-row: 1/2;
     height: 60px;
@@ -1090,6 +1211,7 @@ button:focus {
     align-items: center;
     text-decoration: none;
   }
+
   nav svg {
     fill: #a66326;
   }
@@ -1103,15 +1225,18 @@ button:focus {
   .close-sidebar-button {
     display: none;
   }
+
   .links-container {
-    height: 100%; /*Expand to the whole page*/
-    display: flex;/*Navigation links go one under the other, from start to end*/
+    height: 100%;
+    /*Expand to the whole page*/
+    display: flex;
+    /*Navigation links go one under the other, from start to end*/
     flex-direction: column;
     align-items: flex-start;
 
     /*The pop-up menu stays at the whole screen and you scroll out of it.
     It is hidden at the right of the screen and goes above all else.*/
-    position: fixed; 
+    position: fixed;
     top: 0;
     right: -300%;
     z-index: 10;
@@ -1122,6 +1247,7 @@ button:focus {
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.75s ease-out;
   }
+
   nav a {
     box-sizing: border-box;
     height: auto;
@@ -1129,18 +1255,21 @@ button:focus {
     padding: 20px 30px;
     justify-content: flex-start;
   }
+
   /*Style the burger and X image*/
   .open-sidebar-button,
   .close-sidebar-button {
     padding: 20px;
     display: block;
   }
+
   /*Un-hide the menu, and bring it to the "left"*/
-  #sidebar-active:checked ~ .links-container {
+  #sidebar-active:checked~.links-container {
     right: 0;
   }
+
   /*An overlay in order for the menu to close when pressing outside the popup menu*/
-  #sidebar-active:checked ~ #overlay {
+  #sidebar-active:checked~#overlay {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -1159,11 +1288,13 @@ button:focus {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
+
   /* Place contact info correctly   */
   .footer_contact_right {
     grid-column: 1/-1;
     grid-row: 2/3;
   }
+
   /* Place copyright correctly  */
   footer .copyright {
     grid-column: 1/-1;
@@ -1175,9 +1306,11 @@ button:focus {
   .index section {
     margin: 2em;
   }
+
   .makesmaller {
     margin: 0em;
   }
+
   /*The links inside the texts must blend-in naturally*/
   main a {
     margin: 0em;
@@ -1188,13 +1321,16 @@ button:focus {
   .nav_categories {
     grid-template-columns: 1fr;
   }
+
   .category_image {
     margin-right: 0em;
   }
+
   .category_image img,
   .category_image source {
     margin: auto;
   }
+
   /*  Used in:    categories.html 
       Purpose:    Centralize the links of the categories.*/
   .category_links li {
@@ -1205,6 +1341,7 @@ button:focus {
   .about {
     grid-template-columns: 1fr;
   }
+
   /*  Used in:    aboutus.html 
       Purpose:    Place the contributors on the same column.*/
   .person_right,
@@ -1213,9 +1350,11 @@ button:focus {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
+
   .person_left {
     grid-row: 2/3;
   }
+
   .person_left_luna {
     grid-row: 3/4;
   }
@@ -1225,6 +1364,7 @@ button:focus {
   #lectures ul {
     grid-template-columns: 1fr;
   }
+
   /*  Used in:    python.html 
       Purpose:    Create a box where a lagre text can be put inside and scroll to read it.(see to understand)*/
   .scrollable-text {
@@ -1238,13 +1378,15 @@ button:focus {
     margin: 0.3em;
     scrollbar-width: none;
   }
+
   /*  Used in:    python.html 
-      Purpose:    Create box-shadow to when the user hovers above the text*/
+        Purpose:    Create box-shadow to when the user hovers above the text*/
   .scrollable-text:hover {
     /*Show where the text boarder is when hovering*/
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
+
   .scrollable-text p {
     margin-bottom: 10px;
     text-align: justify;
@@ -1257,28 +1399,34 @@ button:focus {
   .nnMain {
     grid-template-columns: 1fr;
   }
+
   .course-description,
   .tables-of-content,
   .courses-container {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
+
   .tables-of-content {
     grid-row: 2/3;
   }
+
   .courses-container {
     grid-row: 3/4;
     grid-template-columns: 1fr;
   }
+
   .course iframe {
     float: none;
     align-items: center;
     display: block;
     margin: auto;
   }
+
   .course p {
     display: block;
   }
+
   /*Forms*/
   form {
     padding: 1rem;
@@ -1291,33 +1439,41 @@ button:focus {
   button {
     font-size: 0.9rem;
   }
+
   /*signup.html*/
   .supmain form {
     grid-template-columns: 1fr;
   }
+
   .personal-info {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
+
   .contact-info {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
+
   .user-info {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
   }
+
   /*Give some space between*/
-  .form-questions-container > * {
+  .form-questions-container>* {
     margin: 1em;
   }
-  .signup-question-homeAddress > * {
+
+  .signup-question-homeAddress>* {
     margin-bottom: 1em;
   }
+
   .signup-question {
     margin: 1em;
   }
-  .contact-info > .signup-question > #phonenumber {
+
+  .contact-info>.signup-question>#phonenumber {
     margin-top: 1em;
   }
 
@@ -1344,332 +1500,332 @@ button:focus {
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfCBc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfCBc4EsA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfBxc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfBxc4EsA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfChc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfChc4EsA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfBBc4.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBBc4.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7mxKOzY.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4WxKOzY.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7GxKOzY.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
-} /* greek-ext */
+}
+
+/* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBBc4.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxEIzIFKw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxEIzIFKw.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxLIzIFKw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxLIzIFKw.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxGIzIFKw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxGIzIFKw.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxIIzI.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc2CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc2CsTKlA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc5CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc5CsTKlA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc0CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc0CsTKlA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic2CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic2CsTKlA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic5CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic5CsTKlA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
@@ -1680,200 +1836,199 @@ button:focus {
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic0CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic0CsTKlA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc2CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc2CsTKlA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc5CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc5CsTKlA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc0CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc0CsTKlA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xIIzI.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc2CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc2CsTKlA.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc5CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc5CsTKlA.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc0CsTKlA.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc0CsTKlA.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* greek-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEzwdL_nz.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEzwdL_nz.woff2) format("woff2");
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEzMdL_nz.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEzMdL_nz.woff2) format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
     U+03A3-03FF;
 }
+
 /* latin-ext */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEz4dL_nz.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEz4dL_nz.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEzAdLw.woff2)
-    format("woff2");
+  src: url(https://fonts.gstatic.com/s/roboto/v32/KFOiCnqEu92Fr1Mu51QrEzAdLw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
     U+2212, U+2215, U+FEFF, U+FFFD;
