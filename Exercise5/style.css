@@ -797,9 +797,11 @@ button:focus {
 /*Between Desktop and Tablet*/
 @media only screen and (max-width: 1400px) {
   /*signup.html*/
+  /*Make the sign up form have 2 columns*/
   #signupform form {
     grid-template-columns: repeat(2, 1fr);
   }
+  /*Place the fieldsets in the right columns and rows*/
   .personal-info {
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -812,15 +814,19 @@ button:focus {
     grid-column: 2/-1;
     grid-row: 2/3;
   }
+  /*Make the images take up move space by reducing the margin and padding of their container*/
   .contact-group {
     margin: 0.2em;
     padding: 0.2em;
   }
   /*quizz.html*/
+  /*Make the quiz form have 2 columns
+    and centralize it*/
   .quiz-main form {
     grid-column: 2/-2;
     grid-template-columns: repeat(2, 1fr);
   }
+  /*Place the fieldsets in the proper columns and rows*/
   .education-background {
     grid-column: 1/2;
     grid-row: 1/3;
@@ -838,7 +844,6 @@ button:focus {
 @media only screen and (max-width: 960px) {
   /* Change body */
   body {
-    /* background-color: firebrick; */
     display: grid;
     grid:
       "h h"
@@ -907,25 +912,26 @@ button:focus {
     grid-column: 2/3;
     grid-row: 1/2;
   }
+  /*Make the body>main of the categories.html page two columns wide*/
   .nav_categories {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  /*Make the books and lectures display in two columns*/
   #books ul,
   #lectures ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /*Make the body>main of the nn.html and python.html pages two columns wide*/
   .pythonMain,
   .nnMain {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  /*Picture gets smaller while shrinking the window, and it is centralised.*/
   #pythonvideoimage {
-    /* float :left;
-        height: auto; */
-    /* display: inline-block; */
     max-width: 100%;
     height: auto;
     margin: 0em;
@@ -933,27 +939,28 @@ button:focus {
     justify-content: center;
     align-items: center;
   }
+  /*Make the courses take the whole width of the parent, and have 2 courses at each row.*/
   .courses-container {
     margin: 0%;
     grid-column: 1/3;
     grid-template-columns: repeat(2, 1fr);
   }
+  /*Make the Image and text be in the first column*/
   .course-description {
     grid-column: 1/2;
     margin: 0.5em;
   }
+  /*Make the table of content be in the second column*/
   .tables-of-content {
     grid-column: 2/3;
   }
-  /* .course-description > p{
-        display: flex;
-        text-align: justify; 
-        overflow: hidden;
-        flex-wrap: wrap;
-    } */
+  /*  Used in:    nn_and_dl.html 
+      Purpose:    Make the image float left*/
   #nnimage {
     float: left;
   }
+  /*  Used in:    nn_and_dl.html 
+      Purpose:    Make the paragraph (description of the book) float left, so the sub-informations can go up next to the iamge.*/  
   .nnMain .description {
     float: left;
   }
@@ -961,18 +968,21 @@ button:focus {
   /*signup.html*/
 
   /*quizz.html*/
+  /*  Used in:    quizz.html 
+      Purpose:    Make the form have 2 columns for readability reasons.*/
   .quiz-main {
     grid-template-columns: 1fr 1fr;
   }
   .quiz-main form {
     grid-column: 1/-1;
-    /* display: grid; */
-    /* grid-template-columns:  repeat(2, 1fr); */
   }
 }
 
 @media only screen and (max-width: 750px) {
   /*signup.html*/
+  /*  Used in:    signup.html 
+      Purpose:    Make the form have 2 columns for readability reasons,
+                  and place fieldsets accordingly.*/
   .supmain form {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -992,6 +1002,9 @@ button:focus {
     max-width: 50%;
   }
   /*quizz.html*/
+  /*  Used in:    quizz.html 
+      Purpose:    Make the form have 1 column for readability reasons,
+                  and place fieldsets accordingly.*/
   .quiz-main {
     grid-template-columns: 1fr;
   }
@@ -1014,6 +1027,7 @@ button:focus {
 
 /* CSS Styling for Mobile */
 @media only screen and (max-width: 620px) {
+  /*Decrease margin and padding for better visualisation*/
   * {
     margin: 0.05em;
     padding: 0.03em;
@@ -1023,7 +1037,6 @@ button:focus {
     margin-right: 1em;
   }
   body {
-    /* background-color: aqua; */
     display: grid;
     grid:
       "h"
@@ -1037,19 +1050,22 @@ button:focus {
     grid-template-columns: 1fr 3fr 1fr;
     position: relative;
   }
-
+  /*Re-arrange the placement of the items to fit the mobile window*/
+  /*Top-left corner*/
   header .webpage-logo {
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  /*Increase the size of the image to be visible */
   .topimage {
     max-width: 200%;
   }
+  /*Place title in top-middle*/
   header .title {
     grid-column: 2/5;
     grid-row: 1/2;
   }
-
+  /*Place nav in top-right corner*/
   header > nav {
     grid-column: 5/6;
     grid-row: 1/2;
@@ -1082,20 +1098,26 @@ button:focus {
     display: none;
   }
 
+  /*Make the checkboxes none visible*/
   .open-sidebar-button,
   .close-sidebar-button {
     display: none;
   }
   .links-container {
+    height: 100%; /*Expand to the whole page*/
+    display: flex;/*Navigation links go one under the other, from start to end*/
     flex-direction: column;
     align-items: flex-start;
 
-    position: fixed;
+    /*The pop-up menu stays at the whole screen and you scroll out of it.
+    It is hidden at the right of the screen and goes above all else.*/
+    position: fixed; 
     top: 0;
     right: -300%;
     z-index: 10;
     width: 300px;
 
+    /*Box-shadow and transition for better visualisation and transition*/
     background-color: #283618;
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.75s ease-out;
@@ -1107,14 +1129,17 @@ button:focus {
     padding: 20px 30px;
     justify-content: flex-start;
   }
+  /*Style the burger and X image*/
   .open-sidebar-button,
   .close-sidebar-button {
     padding: 20px;
     display: block;
   }
+  /*Un-hide the menu, and bring it to the "left"*/
   #sidebar-active:checked ~ .links-container {
     right: 0;
   }
+  /*An overlay in order for the menu to close when pressing outside the popup menu*/
   #sidebar-active:checked ~ #overlay {
     height: 100%;
     width: 100%;
@@ -1170,6 +1195,8 @@ button:focus {
   .category_image source {
     margin: auto;
   }
+  /*  Used in:    categories.html 
+      Purpose:    Centralize the links of the categories.*/
   .category_links li {
     text-align: center;
   }
@@ -1178,6 +1205,8 @@ button:focus {
   .about {
     grid-template-columns: 1fr;
   }
+  /*  Used in:    aboutus.html 
+      Purpose:    Place the contributors on the same column.*/
   .person_right,
   .person_left,
   .person_left_luna {
@@ -1196,6 +1225,8 @@ button:focus {
   #lectures ul {
     grid-template-columns: 1fr;
   }
+  /*  Used in:    python.html 
+      Purpose:    Create a box where a lagre text can be put inside and scroll to read it.(see to understand)*/
   .scrollable-text {
     display: inline-block;
     max-width: 600px;
@@ -1207,6 +1238,8 @@ button:focus {
     margin: 0.3em;
     scrollbar-width: none;
   }
+  /*  Used in:    python.html 
+      Purpose:    Create box-shadow to when the user hovers above the text*/
   .scrollable-text:hover {
     /*Show where the text boarder is when hovering*/
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
