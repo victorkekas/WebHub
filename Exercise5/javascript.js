@@ -67,24 +67,25 @@ function QuizPageInit() {
 }
 /*Validation Functions for Signup form*/
 function SignUpPageSubmitValidate(event) {
-    const name = document.getElementById("name");
-    const surname = document.getElementById("surname");
-    const homeaddress = document.getElementById("homeaddress");
-    const homeaddressnumber = document.getElementById("homeaddressnumber");
-    const dob = document.getElementById("dob");
-    const email = document.getElementById("email");
-    const country = document.getElementById("country");
-    const phonenumber = document.getElementById("phonenumber");
-    const contactMethods = document.querySelectorAll('.contact-check input[type="checkbox"]');
-    const username = document.getElementById("username");
-    const password = document.getElementById("password");
-    const passwordCheck = document.getElementById("passwordCheck");
+    let name = document.getElementById("name");
+    let surname = document.getElementById("surname");
+    let homeaddress = document.getElementById("homeaddress");
+    let homeaddressnumber = document.getElementById("homeaddressnumber");
+    let dob = document.getElementById("dob");
+    let email = document.getElementById("email");
+    let country = document.getElementById("country");
+    let phonenumber = document.getElementById("phonenumber");
+    let contactMethods = document.querySelectorAll('.contact-check input[type="checkbox"]');
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let passwordCheck = document.getElementById("passwordCheck");
+    //Stop Default submition
+    event.preventDefault();
     //Check every field. If one is invalid the whole form is invalid
-    let validForm = NameValidate(name) && SurnameValidate(surname) && HomeAddressValidate(homeaddress) && HomeAddressNumberValidate(homeaddressnumber) && DoBValidate(dob) && EmailValidate(email) && PhonenumberValidate(country, phonenumber) && ContactMethodValidate(contactMethods) && UsernameValidate(username) && PasswordValidate(password) && PasswordCheckValidate(password, passwordCheck);
+    let validForm = NameValidate(name) && SurnameValidate(surname) && HomeAddressValidate(homeaddress) && HomeAddressNumberValidate(homeaddressnumber) && DoBValidate(dob) && GenderValidate(gender) && EmailValidate(email) && PhonenumberValidate(country, phonenumber) && ContactMethodValidate(contactMethods) && UsernameValidate(username) && PasswordValidate(password) && PasswordCheckValidate(password, passwordCheck);
     //Do not submit if any field is invalid 
-    if (!validForm) {
-        console.log("Net")
-        event.preventDefault();
+    if (validForm) {
+        document.getElementById("signupForm").submit()
     }
 
 }
@@ -96,8 +97,12 @@ function TextOnlyValidate(text) {
 function NameValidate(name) {
     let isValid = true;
     if (!TextOnlyValidate(name)) {
-        //Change colour
         isValid = false;
+    }
+    if(!isValid){
+        setError(name,"Name must contain only letters.");
+    }else{
+        setSuccess(name);
     }
     console.log("name " + isValid)
     return isValid;
@@ -105,8 +110,12 @@ function NameValidate(name) {
 function SurnameValidate(surname) {
     let isValid = true;
     if (!TextOnlyValidate(surname)) {
-        //Change colour
         isValid = false;
+    }
+    if(!isValid){
+        setError(surname,"Surname must contain only letters.");
+    }else{
+        setSuccess(surname);
     }
     console.log("surname " + isValid)
     return isValid;
@@ -114,17 +123,28 @@ function SurnameValidate(surname) {
 function HomeAddressValidate(homeaddress) {
     let isValid = true;
     if (!TextOnlyValidate(homeaddress)) {
-        //Change colour
         isValid = false;
+    }
+    if(!isValid){
+        setError(homeaddress,"Home address must contain only letters.");
+    }else{
+        setSuccess(homeaddress);
     }
     console.log("home address " + isValid)
     return isValid;
 }
 //Check if the digits are 0-9.
-function HomeAddressNumberValidate(homeAddressNumber) {
+function HomeAddressNumberValidate(homeaddress, homeAddressNumber) {
     let isValid = true;
-    if (!(/^\d*$/.test(homeAddressNumber.value.trim()))) {
-        isValid = false;
+    if(homeaddress.value.trim() !==""){
+        if (!(/^\d*$/.test(homeAddressNumber.value.trim())) || homeAddressNumber.value.trim()<1) {
+            isValid = false;
+        }
+        if(!isValid){
+            setError(homeAddressNumber,"Where do you live bro? In your mom's basement?");
+        }else{
+            setSuccess(homeAddressNumber);
+        }
     }
     console.log("home number " + isValid);
     return isValid;
@@ -143,7 +163,25 @@ function DoBValidate(dob) {
     if (age < 8 || age > 130) {
         isValid = false;
     }
+    if(!isValid){
+        setError(dob,"Requiried age between 8 and 130 years old.");
+    }else{
+        setSuccess(dob);
+    }
     console.log("dob " + isValid);
+    return isValid;
+}
+//Validate Gender
+function GenderValidate(gender){
+    let isValid = SelectOptionsValidation(gender);
+    console.log("gender " + isValid);
+    if(gender.value.trim() === ""){
+        setError(gender,"Provide a gender.");
+    }else if(!isValid){
+        setError(gender,"Gender must contain only letters.");
+    }else{
+        setSuccess(gender);
+    }
     return isValid;
 }
 function EmailValidate(email) {
@@ -151,6 +189,13 @@ function EmailValidate(email) {
     let isValid = true;
     if (!(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value.trim()))) {
         isValid = false;
+    }
+    if(email.value.trim() === ""){
+        setError(email,"You must write an email.");
+    }else if(!isValid){
+        setError(email,"Write a valid email.");
+    }else{
+        setSuccess(email);
     }
     console.log("email " + isValid);
     return isValid;
@@ -161,6 +206,7 @@ function PhonenumberValidate(country, phonenumber) {
     switch (country.value.trim()) {
         case "":
             isValid = false;
+            setError(country,"Pleasse choose a country code.");
             break;
         case "Greece":
             isValid = /^69\d{8}$/.test(phonenumber.value.trim());
@@ -178,6 +224,11 @@ function PhonenumberValidate(country, phonenumber) {
             isValid = /^\d{10}$/.test(phonenumber.value.trim());
             break;
     }
+    if(!isValid){
+        setError(country,"Invalid phone number.");
+    }else{
+        setSuccess(country);
+    }
     console.log("phone " + isValid);
     return isValid;
 }
@@ -185,6 +236,11 @@ function ContactMethodValidate(contactMethods) {
     let isValid = true;
     if (!Array.from(contactMethods).some(checkbox => checkbox.checked)) {
         isValid = false;
+    }
+    if(!isValid){
+        setError(document.getElementById("contact-check-container"),"You must choose a contact option.");
+    }else{
+        setSuccess(document.getElementById("contact-check-container"));
     }
     console.log("contact methods " + isValid);
     return isValid;
@@ -194,17 +250,15 @@ function UsernameValidate(username) {
     let isValid = true;
     const usernameValue = username.value.trim();
     if (!(/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test(usernameValue) || usernameValue.length > 30)) {
-        console.log("test1 " + !(/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test(usernameValue)));
-        console.log("test2 " + usernameValue.length);
-        console.log("test2 " + usernameValue.length > 30);
         isValid = false;
     }
-    console.log("1"+/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test("a"));
-    console.log("a".length > 30);
-    console.log("2"+/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test("username123"));
-    console.log("3"+/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test("user_name!123"));
-    console.log("4"+/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test("!user"));
-    console.log("5"+/^[a-zA-Z0-9][a-zA-Z0-9\-_!@#$%^&*()+=]*$/.test("thisisaverylongusernamethatwillfailvalidation"));
+    if(usernameValue === ""){
+        setError(username,"You must write a username.");
+    }else if(!isValid){
+        setError(username,"Password must be at most 30 character.");
+    }else{
+        setSuccess(username);
+    }
     console.log("username " + isValid);
     return isValid;
 }
@@ -221,14 +275,27 @@ function PasswordValidate(password) {
     ) {
         isValid = false;
     }
+    if(passwordValue === ""){
+        setError(password,"You must write a password.");
+    }else if(!isValid){
+        setError(password,"Password must be at lest 10 character and contain one uppercase, one lowercase, one number, and one special character.");
+    }else{
+        setSuccess(password);
+    }
     console.log("password " + isValid);
     return isValid;
+
 }
 //Check if the two passwords match
 function PasswordCheckValidate(password, passwordCheck) {
     let isValid = true;
     if (password.value.trim() !== passwordCheck.value.trim()) {
         isValid = false;
+    }
+    if(!isValid){
+        setError(passwordCheck,"Password doesn't match.");
+    }else{
+        setSuccess(passwordCheck);
     }
     console.log("passwordcheck " + isValid);
     return isValid;
@@ -257,6 +324,7 @@ function QuizPageSubmitValidate(event) {
         event.preventDefault();
     }
 }
+//True if user has selected anything
 function SelectOptionsValidation(selection) {
     let isValid = true;
     if (selection.value === "") {
@@ -384,6 +452,8 @@ const setError = (element, message) => {
 //Display an success message when input is right
 const setSuccess = element => {
     const formQuestion = element.parentElement;
+    console.log(formQuestion)
+    console.log(element)
     const errorDisplay = formQuestion.querySelector('.error');
 
     errorDisplay.innerText = '';

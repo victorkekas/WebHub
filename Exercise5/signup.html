@@ -58,51 +58,96 @@
 
     <main class="supmain">
         <!-- <section id="signupForm"> -->
-            <form action="quizz.html" method="post" id="signupForm">
-                <fieldset class="personal-info">
-                    <legend>Personal Info</legend>
-                    <div class="grid-container">
-                        <div class="grid-item-name">
-                            <label for="name"><p class="star">*</p>Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your first name" required>
-                        </div>
-                        <div class="grid-item-surname">
-                            <label for="surname"><p class="star">*</p>Surname</label>
-                            <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
-                        </div>
-                        <div class="grid-item-homeAddress">
-                            <label for="homeaddress">Home Address</label>
-                            <input type="text" id="homeaddress" name="homeaddress"
-                                placeholder="Enter your home address">
-                            <label for="homeaddressnumber">Number</label>
-                            <input type="number" id="homeaddressnumber" name="homeaddress"
-                                placeholder="Enter your home address number">
-                        </div>
-                        <div class="grid-item-dob">
-                            <label for="dob"><p class="star">*</p>Date of Birth</label>
-                            <input type="date" id="dob" name="dob" placeholder="Enter your birthday" required>
-                        </div>
+        <form action="quizz.html" method="post" id="signupForm">
+            <fieldset class="personal-info">
+                <legend>Personal Info</legend>
+                <div class="signup-question-container">
+                    <div class="signup-question name">
+                        <label for="name">
+                            <p class="star">*</p>Name
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Enter your first name" required
+                            autocomplete="name">
+                        <div class="error"></div>
                     </div>
-                </fieldset>
-                <fieldset class="contact-info">
-                    <legend>Contact Info</legend>
-                    <div class="grid-items"><label for="email"><p class="star">*</p>E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="signup-question surname">
+                        <label for="surname">
+                            <p class="star">*</p>Surname
+                        </label>
+                        <input type="text" id="surname" name="surname" placeholder="Enter your last name" required
+                            autocomplete="name">
+                        <div class="error"></div>
                     </div>
-                    <div class="grid-items">
-                        <label for="phonenumber"><p class="star">*</p>Phone Number</label>
-                        <select id="country" name="country" required>
-                            <option value="">Select Country</option>
-                            <option value="Greece">Greece (+30)</option>
-                            <option value="USA">USA (+1)</option>
-                            <option value="UK">UK (+44)</option>
-                            <option value="India">India (+91)</option>
-                        </select>
-                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number"
-                            required>
+                    <div class="signup-question homeAddress">
+                        <label for="homeaddress">Home Address</label>
+                        <input list="address" id="homeaddress" name="homeaddress" placeholder="Enter your home address"
+                            autocomplete="on">
+                        <datalist id="address">
+                            <option value="Pathsion"></option>
+                            <option value="Troias"></option>
+                            <option value="Derigni"></option>
+                            <option value="Antoniadoy"></option>
+                        </datalist>
+                        <div class="error"></div>
                     </div>
-                    <h3><p class="star">*</p>Preferred Contact Method</h3>
-                    <div class="contact-check">
+                    <div class="signup-question homeAddressNumber">
+                        <label for="homeaddressnumber">Number</label>
+                        <input type="number" id="homeaddressnumber" name="homeaddress"
+                            placeholder="Enter your home address number" autocomplete="on">
+                        <div class="error"></div>
+                    </div>
+                    <div class="signup-question dob">
+                        <label for="dob">
+                            <p class="star">*</p>Date of Birth
+                        </label>
+                        <input type="date" id="dob" name="dob" placeholder="Enter your birthday" required>
+                        <div class="error"></div>
+                    </div>
+                    <div class="signup-question gender">
+                        <label for="gender">
+                            <p class="star">*</p>Gender
+                        </label>
+                        <input list="genderes" id="gender" name="gender" placeholder="Enter your gender" required
+                            autocomplete="on">
+                        <datalist id="genderes">
+                            <option value="Male"></option>
+                            <option value="Female"></option>
+                            <option value="None-Specified"></option>
+                        </datalist>
+                        <div class="error"></div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="contact-info">
+                <legend>Contact Info</legend>
+                <div class="signup-question">
+                    <label for="email">
+                        <p class="star">*</p>E-mail
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required
+                        autocomplete="email">
+                    <div class="error"></div>
+                </div>
+                <div class="signup-question">
+                    <label for="phonenumber">
+                        <p class="star">*</p>Phone Number
+                    </label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="Greece">Greece (+30)</option>
+                        <option value="USA">USA (+1)</option>
+                        <option value="UK">UK (+44)</option>
+                        <option value="India">India (+91)</option>
+                    </select>
+                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" required
+                        autocomplete="tel">
+                    <div class="error"></div>
+                </div>
+                <h3>
+                    <p class="star">*</p>Preferred Contact Method
+                </h3>
+                <div class="signup-question">
+                    <div class="contact-check" id="contact-check-container">
                         <input type="checkbox" name="email-icon" id="email-icon">
                         <label class="contact-group" for="email-icon">
                             <img class="formimage" src="../Photos/email.png" alt="Error Loading Image">
@@ -120,23 +165,36 @@
                             <img class="formimage" src="../Photos/whatsapp.png" alt="Error Loading Image">
                         </label>
                     </div>
-                </fieldset>
-                <fieldset class="user-info">
-                    <legend>User Info</legend>
-                    <div class="grid-items"><label for="username"><p class="star">*</p>Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your Username" required>
-                    </div>
-                    <div class="grid-items"><label for="password"><p class="star">*</p>Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your Password" >
-                    </div>
-                    <div class="grid-items"><label for="passwordCheck"><p class="star">*</p>Confirm Password</label>
-                        <input type="password" id="passwordCheck" name="password" placeholder="Enter your Password" >
-                    </div>
+                    <div class="error"></div>
+                </div>
+            </fieldset>
+            <fieldset class="user-info">
+                <legend>User Info</legend>
+                <div class="signup-question">
+                    <label for="username">
+                        <p class="star">*</p>Username
+                    </label>
+                    <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+                    <div class="error"></div>
+                </div>
+                <div class="signup-question"><label for="password">
+                        <p class="star">*</p>Password
+                    </label>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password"
+                        autocomplete="new-password">
+                    <div class="error"></div>
+                </div>
+                <div class="signup-question"><label for="passwordCheck">
+                        <p class="star">*</p>Confirm Password
+                    </label>
+                    <input type="password" id="passwordCheck" name="password" placeholder="Enter your Password">
+                    <div class="error"></div>
+                </div>
 
-                </fieldset>
-                <button type="submit" id="submit-btn">Submit</button>
+            </fieldset>
+            <button type="submit" id="submit-btn">Submit</button>
 
-            </form>
+        </form>
         <!-- </section>  -->
 
         <p>Already have an account?<a href="login.html">Login here</a></p>

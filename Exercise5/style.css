@@ -587,6 +587,8 @@ fieldset{
 
 /* Make the grid position */
 .contact-check {
+    margin: 0em;
+    padding: 0em;
     display: flex;
     flex-direction: row;
     flex-flow: nowrap;
@@ -622,44 +624,59 @@ fieldset{
     filter: grayscale(0%); 
 }
 
-.grid-container {
+.signup-question-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
 }
-/* .form-questions-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-} */
 /*Centralize the children of the container*/
-.grid-container > *{
+.signup-question-container > *{
     align-content: center;
 }
-/* .form-questions-container > *{
-    align-content: center;
-} */
-.grid-item-name, .grid-item-homeAddress{
+.signup-question.name, .signup-question.homeAddress, .signup-question.homeAddressNumber{
     grid-column: 1/2;
+    grid-row: 1/2;
 }
-.grid-item-surname, .grid-item-dob{
+.signup-question.homeAddress{
+    grid-row: 2/3;
+}
+.signup-question.homeAddressNumber{
+    grid-row: 3/4;
+}
+.signup-question.surname, .signup-question.dob, .signup-question.gender{
     grid-column: 2/-1;
+    grid-row: 1/2;
+}
+.signup-question.dob{
+    grid-row: 2/3;
+}
+.signup-question.gender{
+    grid-row: 3/4;
 }
 
-.grid-item label, .grid-item input {
+
+.signup-question label, .signup-question input {
     width: 100%;
     box-sizing: border-box;
 }
-/* 
-.form-question.name, .form-question.homeAddress{
-    grid-column: 1/2;
+.signup-question input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
-.form-question.surname, .form-question.dob{
-    grid-column: 2/-1;
+/*Change input border for error in signup*/
+.signup-question.error input{
+    border-color: #ff3860;
 }
 
-.form-question label, .form-question input {
-    max-width: 100%;
-    box-sizing: border-box;
-} */
+/*Change input border for success in signup*/
+.signup-question.success input{
+    border-color: #09c372;
+}
+/*Make error message red in signup*/
+.signup-question .error{
+    color: #ff3860;
+    font-size: 0.8em;
+}
+
 /*quizz.html*/
 
 /* General Form Styling */
@@ -715,19 +732,18 @@ textarea {
     box-shadow: none;
 }
 
-/*Change input border for error*/
+/*Change input border for error in quiz*/
 .form-question.error input, .form-question.error textarea{
     border-color: #ff3860;
 }
-/*Change input border for success*/
+/*Change input border for success in quiz*/
 .form-question.success input, .form-question.success textarea{
     border-color: #09c372;
 }
-/*Make error message red*/
+/*Make error message red in quiz*/
 .form-question .error{
     color: #ff3860;
     font-size: 0.8em;
-    /* height: 13px; */
 }
 
 textarea {
@@ -814,6 +830,10 @@ button:focus {
     .user-info{
         grid-column: 2/-1;
         grid-row: 2/3;
+    }
+    .contact-group {
+        margin: 0.2em;
+        padding: 0.2em;
     }
     /*quizz.html*/
     .quiz-main form{
@@ -1190,6 +1210,7 @@ button:focus {
         grid-template-columns: 1fr;
     }
     .scrollable-text {
+        display: inline-block;
         max-width: 600px; 
         max-height: 200px;
         overflow-y: auto;
@@ -1267,13 +1288,13 @@ button:focus {
     .form-questions-container > *{
         margin: 1em ;
     }
-    .grid-item-homeAddress > *{
+    .signup-question-homeAddress > *{
         margin-bottom: 1em ;
     }
-    .grid-items{
+    .signup-question{
         margin: 1em ;
     }
-    .contact-info > .grid-items >#phonenumber{
+    .contact-info > .signup-question >#phonenumber{
         margin-top: 1em;
     }
 
